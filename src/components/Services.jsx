@@ -15,24 +15,14 @@ const services = [
     glyph: "icon_2",
   },
   {
-    title: "Prototyping & UX Design",
-    text: "Rapidly test ideas with interactive AI-generated prototypes and data-backed design decisions that put users first.",
-    glyph: "icon_3",
-  },
-  {
     title: "AI Integration & Automation",
     text: "Enhance your product with AI features — from predictive analytics to smart chatbots — to improve efficiency and user engagement.",
     glyph: "icon_4",
   },
   {
-    title: "Cloud Architecture & DevOps",
-    text: "Deploy with confidence. We design secure, scalable, and cost-efficient cloud infrastructure with automated testing and pipelines.",
+    title: "Smart Workflow Automation",
+    text: "Streamline repetitive processes and boost productivity by integrating AI-powered automation across your organization.",
     glyph: "icon_5",
-  },
-  {
-    title: "Startup Growth Consulting",
-    text: "We're more than a dev shop — we help you refine your business model, optimize workflows, and prepare for funding rounds.",
-    glyph: "icon_6",
   },
 ];
 

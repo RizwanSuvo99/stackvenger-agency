@@ -47,7 +47,7 @@ export default function Footer({ onOpenContact, variant, activeNav, slim }) {
               Together
             </h2>
             <p>
-              With Softy Solutions, you don&apos;t just build faster — you build smarter.
+              With StackVenger, you don&apos;t just build faster — you build smarter.
               Let&apos;s make your launch unforgettable.
             </p>
             <div className="hero-cta">

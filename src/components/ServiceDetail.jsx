@@ -2,18 +2,13 @@ import { useState } from "react";
 import { ArrowRight, Chevron, ChevronRight, Facebook, Instagram, XTwitter } from "./icons";
 import { Link, sectionLink, ABOUT_PATH, SERVICE_PATHS, BLOG_PATH, CONTACTS_PATH, TEAM_PATH } from "../router";
 
-const [AI_PATH, CSW_PATH, PUX_PATH, AIA_PATH, CUD_PATH, SGC_PATH, IDI_PATH, SWA_PATH, ISC_PATH] = SERVICE_PATHS;
+const [AI_PATH, CSW_PATH, AIA_PATH, SWA_PATH] = SERVICE_PATHS;
 
 const serviceLinks = [
   ["AI-Accelerated Product Development", AI_PATH],
   ["Custom Software & App Development", CSW_PATH],
-  ["Prototyping & UX Design", PUX_PATH],
   ["AI Integration & Automation", AIA_PATH],
-  ["Cloud Architecture & DevOps", CUD_PATH],
-  ["Startup Growth Consulting", SGC_PATH],
-  ["Intelligent Data Insights", IDI_PATH],
   ["Smart Workflow Automation", SWA_PATH],
-  ["Innovation Strategy Consulting", ISC_PATH],
 ];
 
 const SERVICES = {
@@ -33,7 +28,7 @@ const SERVICES = {
       ["Scalable Innovation", "Our approach ensures that your product can grow seamlessly, supported by future-ready AI architectures and automation."],
     ],
     prev: ["Custom Software & App Development", CSW_PATH],
-    next: ["Innovation Strategy Consulting", ISC_PATH],
+    next: ["Smart Workflow Automation", SWA_PATH],
   },
   [CSW_PATH.slice(10, -1)]: {
     title: "Custom Software & App Development",
@@ -50,26 +45,8 @@ const SERVICES = {
       ["Seamless User Experience & Design", "We prioritize intuitive interfaces and smooth functionality to ensure maximum engagement and satisfaction."],
       ["Ongoing Support & Optimization", "After launch, we provide continuous updates, maintenance, and improvements to keep your product running at its best."],
     ],
-    prev: ["Prototyping & UX Design", PUX_PATH],
-    next: ["AI-Accelerated Product Development", AI_PATH],
-  },
-  [PUX_PATH.slice(10, -1)]: {
-    title: "Prototyping & UX Design",
-    heroP:
-      "Rapidly test ideas with interactive AI-generated prototypes and data-backed design decisions that put users first.",
-    aboutP:
-      "Our service focuses on transforming ideas into interactive, user-friendly prototypes that visualize your product\u2019s flow and functionality. We combine user research, wireframing, and intuitive design principles to create experiences that are both engaging and easy to navigate. By testing early and iterating quickly, we ensure your product meets user needs and maximizes satisfaction before development begins.",
-    offerGap: 40,
-    heroImg: 3,
-    offers: [
-      ["User-Centered Prototypes", "We create interactive prototypes that bring your ideas to life, allowing you to test and validate functionality before development."],
-      ["Intuitive UX Design", "Our team crafts seamless user experiences that prioritize clarity, efficiency, and user satisfaction."],
-      ["Wireframes & Mockups", "From low-fidelity sketches to high-fidelity visuals, we provide a full range of design assets to support your product journey."],
-      ["Usability Testing", "We conduct testing with real users to identify pain points early and optimize the design for better engagement."],
-      ["Iterative Design Process", "With agile design cycles, we refine concepts quickly based on feedback, ensuring your product meets business and user needs."],
-    ],
     prev: ["AI Integration & Automation", AIA_PATH],
-    next: ["Custom Software & App Development", CSW_PATH],
+    next: ["AI-Accelerated Product Development", AI_PATH],
   },
   [AIA_PATH.slice(10, -1)]: {
     title: "AI Integration & Automation",
@@ -86,62 +63,8 @@ const SERVICES = {
       ["Scalable Infrastructure", "AI systems built with scalability in mind, ensuring your solutions grow alongside your business without performance issues."],
       ["Ongoing Optimization & Support", "Continuous monitoring, updates, and enhancements to keep your AI and automation tools performing at their best."],
     ],
-    prev: ["Cloud Architecture & DevOps", CUD_PATH],
-    next: ["Prototyping & UX Design", PUX_PATH],
-  },
-  [CUD_PATH.slice(10, -1)]: {
-    title: "Cloud Architecture & DevOps",
-    heroP:
-      "Deploy with confidence. We design secure, scalable, and cost-efficient cloud infrastructure, with automated testing and CI/CD pipelines.",
-    aboutP:
-      "Optimize your infrastructure and accelerate software delivery with scalable cloud solutions and DevOps best practices. We design resilient, secure, and cost-efficient cloud architectures while implementing continuous integration, automated deployment pipelines, and monitoring systems to ensure your applications run smoothly and reliably.",
-    offerGap: 40,
-    heroImg: 5,
-    offers: [
-      ["Scalable Cloud Infrastructure", "We design and implement cloud environments that grow with your business needs, ensuring flexibility and cost efficiency."],
-      ["CI/CD Pipeline Automation", "We set up automated build, test, and deployment pipelines for faster, more reliable software delivery."],
-      ["Monitoring & Reliability", "We provide advanced monitoring, logging, and alerting systems to maintain uptime and quickly address issues."],
-      ["Security & Compliance", "We integrate cloud security best practices and ensure compliance with industry standards and regulations."],
-      ["Ongoing Optimization & Support", "We continuously optimize performance, manage cloud costs, and provide 24/7 DevOps support."],
-    ],
-    prev: ["Startup Growth Consulting", SGC_PATH],
-    next: ["AI Integration & Automation", AIA_PATH],
-  },
-  [SGC_PATH.slice(10, -1)]: {
-    title: "Startup Growth Consulting",
-    heroP:
-      "We\u2019re more than a dev shop — we help you refine your business model, optimize workflows, and prepare for funding rounds.",
-    aboutP:
-      "Startup Growth Consulting helps emerging businesses accelerate their development, optimize operations, and scale effectively. By combining market insights, technology strategy, and growth-focused methodologies, this service guides startups through funding, product-market fit, customer acquisition, and sustainable expansion. The goal is to turn innovative ideas into thriving, long-term ventures.",
-    offerGap: 40,
-    heroImg: 6,
-    offers: [
-      ["Tailored Growth Strategies", "We analyze your startup\u2019s current stage and market potential to create a customized roadmap for sustainable scaling."],
-      ["Investor Readiness Support", "From pitch decks to financial modeling, we help you prepare to attract and secure funding."],
-      ["Market Expansion Guidance", "Identify new markets, distribution channels, and partnerships to accelerate your reach."],
-      ["Operational Efficiency Optimization", "Streamline processes, improve team workflows, and adopt the right tools for maximum productivity."],
-      ["Ongoing Mentorship & Advisory", "Continuous guidance from experienced consultants to keep your startup on track and adaptable to changes."],
-    ],
-    prev: ["Intelligent Data Insights", IDI_PATH],
-    next: ["Cloud Architecture & DevOps", CUD_PATH],
-  },
-  [IDI_PATH.slice(10, -1)]: {
-    title: "Intelligent Data Insights",
-    heroP:
-      "Transform raw data into actionable insights with AI-driven analytics, helping businesses make smarter, faster decisions.",
-    aboutP:
-      "Intelligent Data Insights leverages advanced AI and machine learning to transform complex datasets into clear, actionable insights. Our platform helps businesses uncover hidden patterns, predict trends, and make data-driven decisions with confidence. From real-time analytics to predictive modeling, we empower organizations to optimize operations, enhance customer experiences, and drive measurable growth.",
-    offerGap: null,
-    heroImg: 7,
-    offers: [
-      ["Advanced Data Analytics", "We transform raw information into actionable insights through cutting-edge analytics tools and AI-powered models."],
-      ["Custom Reporting & Dashboards", "Get real-time, visual reports designed around your business goals for smarter decision-making."],
-      ["Predictive Intelligence", "Anticipate trends, risks, and opportunities with machine learning forecasts tailored to your industry."],
-      ["Data Integration & Automation", "Seamlessly connect multiple data sources and automate workflows for efficiency and accuracy."],
-      ["Strategic Consulting", "Our experts guide you on turning insights into impactful business strategies that drive measurable results."],
-    ],
     prev: ["Smart Workflow Automation", SWA_PATH],
-    next: ["Startup Growth Consulting", SGC_PATH],
+    next: ["Custom Software & App Development", CSW_PATH],
   },
   [SWA_PATH.slice(10, -1)]: {
     title: "Smart Workflow Automation",
@@ -158,26 +81,8 @@ const SERVICES = {
       ["Data-Driven Insights", "Monitor workflow performance with analytics and reports, enabling smarter decision-making."],
       ["Integration with Existing Tools", "Seamlessly connect with your CRM, email, project management, and other software for a unified workflow ecosystem."],
     ],
-    prev: ["Innovation Strategy Consulting", ISC_PATH],
-    next: ["Intelligent Data Insights", IDI_PATH],
-  },
-  [ISC_PATH.slice(10, -1)]: {
-    title: "Innovation Strategy Consulting",
-    heroP:
-      "Guide startups and established companies to sustainable growth with AI insights, tech strategy, and market-driven innovation.",
-    aboutP:
-      "Innovation Strategy Consulting helps businesses identify growth opportunities, leverage emerging technologies, and implement forward-thinking strategies to stay ahead of the competition. By combining market insights, AI-driven analysis, and creative problem-solving, this service guides companies in turning innovative ideas into actionable plans that drive sustainable success.",
-    offerGap: null,
-    heroImg: 9,
-    offers: [
-      ["Market Analysis & Trend Identification", "We help businesses identify emerging trends and market opportunities, enabling them to stay ahead of the competition and make data-driven strategic decisions."],
-      ["Innovation Roadmapping", "We develop tailored innovation roadmaps, aligning your business goals with actionable steps for product, service, and process innovation."],
-      ["Technology & Digital Transformation Advisory", "We guide companies in integrating cutting-edge technologies, optimizing digital workflows, and adopting disruptive solutions to boost efficiency and growth."],
-      ["Ideation & Concept Development", "We facilitate creative workshops and brainstorming sessions to generate innovative ideas, validate concepts, and turn them into viable business solutions."],
-      ["Performance Monitoring & Strategy Optimization", "We track innovation initiatives, measure outcomes, and refine strategies to ensure continuous improvement and long-term success."],
-    ],
     prev: ["AI-Accelerated Product Development", AI_PATH],
-    next: ["Smart Workflow Automation", SWA_PATH],
+    next: ["AI Integration & Automation", AIA_PATH],
   },
 };
 

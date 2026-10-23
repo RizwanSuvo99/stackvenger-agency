@@ -9,13 +9,8 @@ import {
 const SERVICE_NAMES = [
   "AI-Accelerated Product Development",
   "Custom Software & App Development",
-  "Prototyping & UX Design",
   "AI Integration & Automation",
-  "Cloud Architecture & DevOps",
-  "Startup Growth Consulting",
-  "Intelligent Data Insights",
   "Smart Workflow Automation",
-  "Innovation Strategy Consulting",
 ];
 
 const INDEX = [

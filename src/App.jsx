@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import LogoStrip from "./components/LogoStrip";
 import About from "./components/About";
 import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
@@ -83,7 +82,6 @@ export default function App() {
           </div>
           <main>
             <Hero />
-            <LogoStrip />
             <About />
             <Services />
             <WhyUs />

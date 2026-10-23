@@ -3,13 +3,8 @@ import { useEffect, useState } from "react";
 export const SERVICE_PATHS = [
   "/services/ai-accelerated-product-development/",
   "/services/custom-software-app-development/",
-  "/services/prototyping-ux-design/",
   "/services/ai-integration-automation/",
-  "/services/cloud-architecture-devops/",
-  "/services/startup-growth-consulting/",
-  "/services/intelligent-data-insights/",
   "/services/smart-workflow-automation/",
-  "/services/innovation-strategy-consulting/",
 ];
 export const SERVICE_PATH = SERVICE_PATHS[0];
 export const ABOUT_PATH = "/about-us/";

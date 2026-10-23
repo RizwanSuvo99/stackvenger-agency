@@ -34,11 +34,11 @@ function MediaCard({ src, delay, onPlay }) {
 
 const col = {
   a1: {
-    quote: "Softy Solutions took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!",
+    quote: "StackVenger took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!",
     who: "Alex Carter, Founder of Taskify",
   },
   a2: {
-    quote: "Softy Solutions turned our scattered idea into a polished MVP in under two months. The AI-driven workflow saved us months of trial and error.",
+    quote: "StackVenger turned our scattered idea into a polished MVP in under two months. The AI-driven workflow saved us months of trial and error.",
     who: "Sofia Patel, Co-Founder at EcoLink",
   },
   b1: {

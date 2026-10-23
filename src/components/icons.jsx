@@ -14,7 +14,7 @@ const Svg = ({ children, size = 20, viewBox = "0 0 24 24", className, style, dir
   </svg>
 );
 
-/* softy squiggle logo mark */
+/* squiggle mark (legacy, unused) */
 export const LogoMark = (p) => (
   <Svg {...p} viewBox="0 0 48 48">
     <path
@@ -141,13 +141,13 @@ export const Phone = (p) => (
 
 export const Close = (p) => (
   <Svg {...p}>
-    <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" strokeWidth="2.2" />
+    <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeLinecap="round" strokeWidth="2.2" />
   </Svg>
 );
 
 export const Menu = (p) => (
   <Svg {...p}>
-    <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" strokeWidth="2.2" />
+    <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeLinecap="round" strokeWidth="2.2" />
   </Svg>
 );
 

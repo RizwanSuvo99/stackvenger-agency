@@ -10,7 +10,7 @@ const plans = [
 ];
 
 const faqs = [
-  ["What makes Softy Solutions different from any other digital agency?", "We don’t just “run campaigns.” We fuse AI, design, and strategy to move fast, break the ordinary, and scale what truly works. Our approach combines innovation with practical results, ensuring that every project delivers measurable impact and long-term value."],
+  ["What makes StackVenger different from any other digital agency?", "We don’t just “run campaigns.” We fuse AI, design, and strategy to move fast, break the ordinary, and scale what truly works. Our approach combines innovation with practical results, ensuring that every project delivers measurable impact and long-term value."],
   ["Do you only work with startups?", "Not at all. While we love partnering with startups to bring fresh ideas to life, we also work with established businesses, nonprofits, and enterprises. Our solutions are tailored to fit organizations of all sizes and stages."],
   ["How fast can you deliver results?", "It depends on the scope of the project, but we focus on speed without sacrificing quality. Some results can be seen in a matter of weeks, while larger strategies are designed for sustainable, long-term growth."],
   ["What services do you actually provide?", "We specialize in AI-driven solutions, UX/UI design, full-stack development, digital marketing, and growth strategy. From building digital products to scaling campaigns, we cover the full spectrum of innovation and execution."],
@@ -90,7 +90,7 @@ export default function PricesPage() {
           <span className="ab-pill">Create Your Project</span>
           <h2 className="gradient-text grad0">Let’s Bring Your Boldest Ideas to Life!</h2>
           <p>
-            With Softy Solutions, you don’t just build faster — you build smarter. Let’s make
+            With StackVenger, you don’t just build faster — you build smarter. Let’s make
             your launch unforgettable.
           </p>
           <Link className="btn" to={CONTACTS_PATH}>

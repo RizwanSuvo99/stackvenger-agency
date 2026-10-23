@@ -9,10 +9,8 @@ import {
 const services = [
   "AI-Accelerated Product Development",
   "Custom Software & App Development",
-  "Prototyping & UX Design",
   "AI Integration & Automation",
-  "Cloud Architecture & DevOps",
-  "Startup Growth Consulting",
+  "Smart Workflow Automation",
 ];
 
 const pages = [
@@ -30,10 +28,8 @@ function ServicesMega() {
         {[
           ["AI-Accelerated Product Development", "", SERVICE_PATH],
           ["Custom Software & App", "Development", SERVICE_PATHS[1]],
-          ["Prototyping & UX Design", "", SERVICE_PATHS[2]],
-          ["AI Integration & Automation", "", SERVICE_PATHS[3]],
-          ["Cloud Architecture & DevOps", "", SERVICE_PATHS[4]],
-          ["Startup Growth Consulting", "", SERVICE_PATHS[5]],
+          ["AI Integration & Automation", "", SERVICE_PATHS[2]],
+          ["Smart Workflow Automation", "", SERVICE_PATHS[3]],
         ].map(([a, b, to]) => (
           <Link className="msv-item" to={to} key={a}>{a}{b ? (<><br />{b}</>) : null}</Link>
         ))}
@@ -111,8 +107,8 @@ export default function Header({ onOpenContact, route }) {
     <>
       <header className={`header ${scrolled ? "scrolled" : ""}`}>
         <div className="header-inner">
-          <Link to="/" className="logo" aria-label="Softy Solutions — home">
-            <img src="/assets/icons/logo.svg" alt="Softy Solutions" width="169" height="55" />
+          <Link to="/" className="logo" aria-label="StackVenger — home">
+            <img src="/assets/icons/logo.svg" alt="StackVenger" width="231" height="55" />
           </Link>
 
           <nav className="nav-pill" aria-label="Primary">

@@ -21,7 +21,7 @@ function VideoCard() {
         <>
           <img
             src="/assets/images/71-home-1-1.webp"
-            alt="Softy Solutions studio showreel"
+            alt="StackVenger studio showreel"
             loading="lazy"
           />
           <button className="play-btn" aria-label="Play showreel" onClick={() => setPlaying(true)}>
@@ -36,7 +36,6 @@ function VideoCard() {
 }
 
 export default function Hero() {
-  const avatars = Array.from({ length: 5 }, (_, n) => `/assets/images/71-home-1-client-${n + 1}.webp`);
   return (
     <section className="hero" id="top">
       <div className="container">
@@ -57,20 +56,9 @@ export default function Hero() {
 
         <Reveal delay={210}>
           <p className="hero-para">
-            Softy Solutions combines AI technology with expert developers to
+            StackVenger combines AI technology with expert developers to
             turn your idea into a market-ready product — in record time.
           </p>
-        </Reveal>
-
-        <Reveal delay={300}>
-          <div className="hero-avatars">
-            <div className="avatar-stack" aria-hidden="true">
-              {avatars.map((src) => (
-                <img key={src} src={src} alt="" width="50" height="50" loading="lazy" />
-              ))}
-            </div>
-            <span>2000+ Happy Clients</span>
-          </div>
         </Reveal>
 
         <Reveal delay={380}>

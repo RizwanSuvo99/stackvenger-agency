@@ -16,7 +16,7 @@ export default function About() {
       <div className="container">
         <Reveal>
           <p className="statement">
-            At Softy Solutions, we harness AI-assisted design, development, and
+            At StackVenger, we harness AI-assisted design, development, and
             testing to help startups move from idea to launch up to 3x faster
             than traditional agencies.
           </p>

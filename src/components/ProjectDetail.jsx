@@ -12,9 +12,9 @@ const AUTHORS = {
 };
 
 const REVIEWS = [
-  ["Softy Solutions took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!", "Alex Carter, Founder of Taskify", 5],
+  ["StackVenger took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!", "Alex Carter, Founder of Taskify", 5],
   ["Their AI-powered workflow is a game-changer. We launched ahead of schedule and under budget.", "Lena Torres, CEO of BrightFinance", 4],
-  ["Softy Solutions turned our scattered idea into a polished MVP in under two months. The AI-driven workflow saved us months of trial and error.", "Sofia Patel, Co-Founder at EcoLink", 5],
+  ["StackVenger turned our scattered idea into a polished MVP in under two months. The AI-driven workflow saved us months of trial and error.", "Sofia Patel, Co-Founder at EcoLink", 5],
   ["They didn’t just build our product — they challenged our thinking and made it better. Their AI prototypes nailed 90% of our vision on the first try.", "Daniel Wright, CEO of FlowPilot", 5],
 ];
 
