@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronRight, Facebook, Instagram, Star, XTwitter } from "./icons";
 import { PageFooter, Na } from "./ServiceDetail";
-import { PROJECTS, PROJECT_BODY } from "../data/projects";
+import { PROJECTS, coverSrc, galleryOf, bodyOf } from "../data/projects";
 import { Link, projectPath } from "../router";
 
 const AUTHORS = {
@@ -35,16 +35,15 @@ function useCarousel(count, autoplay) {
   return [index, setIndex];
 }
 
-function Gallery({ first }) {
-  const imgs = [first, first + 1, first + 2];
+function Gallery({ imgs, title }) {
   const [i, setI] = useCarousel(imgs.length);
   const go = (d) => setI((i + d + imgs.length) % imgs.length);
   return (
     <div className="pj-gallery">
       <div className="pj-gal-view">
         <div className="pj-gal-track" style={{ transform: `translateX(-${i * 100}%)` }}>
-          {imgs.map((n) => (
-            <img key={n} src={`/assets/images/71-project-gallery-${n}.webp`} alt="" loading="lazy" />
+          {imgs.map((src, k) => (
+            <img key={src} src={src} alt={`${title} screenshot ${k + 1}`} loading="lazy" />
           ))}
         </div>
         <button type="button" className="pj-gal-btn prev" aria-label="Previous image" onClick={() => go(-1)}>
@@ -116,7 +115,8 @@ export default function ProjectDetail({ slug }) {
   const idx = PROJECTS.findIndex((p) => p.slug === slug);
   const p = PROJECTS[idx];
   const n = PROJECTS.length;
-  const [name, role] = AUTHORS[p.author];
+  const [name, role, avatar] = p.authorOverride || [...AUTHORS[p.author], `/assets/images/71-profile-${p.author}.webp`];
+  const body = bodyOf(p);
   // reference order: left arrow → next project in the grid, right arrow → previous one
   const left = PROJECTS[(idx + 1) % n];
   const right = PROJECTS[(idx - 1 + n) % n];
@@ -131,25 +131,26 @@ export default function ProjectDetail({ slug }) {
             <h1>{p.title}</h1>
             <p>{p.lead}</p>
           </div>
-          <div className="pj-hero-img" role="img" aria-label={`${p.title} preview`} style={{ backgroundImage: `url(/assets/images/71-project-${p.img}.webp)` }} />
+          <div className="pj-hero-img" role="img" aria-label={`${p.title} preview`} style={{ backgroundImage: `url(${coverSrc(p)})`, backgroundPosition: p.heroPos }} />
         </div>
       </section>
 
       <section className="pj-body">
         <div className="pj-main">
           <h3>Project Description</h3>
-          {PROJECT_BODY.slice(0, 3).map((t, k) => <p key={k}>{t}</p>)}
-          <Gallery first={p.gallery} />
-          {PROJECT_BODY.slice(3).map((t, k) => <p key={k}>{t}</p>)}
+          {body.slice(0, 3).map((t, k) => <p key={k}>{t}</p>)}
+          <Gallery imgs={galleryOf(p)} title={p.title} />
+          {body.slice(3).map((t, k) => <p key={k}>{t}</p>)}
         </div>
         <aside className="pj-side">
           <h4>Start Date / End Date</h4>
-          <p className="pj-when">Start: Monday, 12:30pm – 3:00pm</p>
-          <p className="pj-when">End: Tuesday, 9:00am – 11:00am</p>
-          <span className="pj-status">Ongoing</span>
+          {(p.when || ["Start: Monday, 12:30pm – 3:00pm", "End: Tuesday, 9:00am – 11:00am"]).map((w) => (
+            <p className="pj-when" key={w}>{w}</p>
+          ))}
+          <span className="pj-status">{p.status || "Ongoing"}</span>
           <h4 className="pj-side-h">Project Author</h4>
           <div className="pj-author">
-            <img src={`/assets/images/71-profile-${p.author}.webp`} alt={name} width="90" height="90" loading="lazy" />
+            <img className={avatar.endsWith(".svg") ? "is-mark" : undefined} src={avatar} alt={name} width="90" height="90" loading="lazy" />
             <div>
               <b>{name}</b>
               <p>{role}</p>
@@ -189,7 +190,7 @@ export default function ProjectDetail({ slug }) {
           {related.map((r) => (
             <article className="pg-pcard" key={r.slug}>
               <Link className="pg-pcover" to={projectPath(r.slug)}>
-                <img src={`/assets/images/71-project-${r.img}.webp`} alt={`${r.title} preview`} loading="lazy" />
+                <img src={coverSrc(r)} alt={`${r.title} preview`} loading="lazy" />
                 <span className="pg-chip">{r.chip}</span>
               </Link>
               <h4><Link to={projectPath(r.slug)}>{r.title}</Link></h4>

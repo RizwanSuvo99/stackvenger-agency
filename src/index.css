@@ -2200,6 +2200,8 @@ hr { border: 0; }
 }
 .pj-author { display: flex; align-items: center; gap: 25px; margin-top: 20px; }
 .pj-author img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; }
+/* brand mark as author avatar: centred on a dark disc */
+.pj-author img.is-mark { padding: 20px; background: var(--line-warm); object-fit: contain; }
 .pj-author b { display: block; font: 500 24px/32.4px var(--font-display); letter-spacing: -1px; color: var(--white); }
 .pj-author p { margin-top: 6px; font-size: 18px; line-height: 27.9px; color: var(--text); }
 .pj-socials { display: flex; gap: 4px; margin-top: 20px; }

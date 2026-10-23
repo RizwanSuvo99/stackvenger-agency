@@ -1,6 +1,6 @@
 import { ArrowRight, Star } from "./icons";
 import { Link, TEAM_PATH, PROJECTS_PATH, projectPath } from "../router";
-import { PROJECTS } from "../data/projects";
+import { PROJECTS, coverSrc } from "../data/projects";
 
 const team = [
   ["Ethan White", "AI Solutions Architect", 1],
@@ -8,14 +8,6 @@ const team = [
   ["Ryan Chen", "Full-Stack Developer", 3],
   ["Liam Carter", "Front-End Developer", 4],
   ["Daniel Foster", "Back-End Engineer", 5],
-];
-
-const projects = [
-  ["NovaHire – AI Recruitment Platform", "Technology", "Automated candidate screening, matching, and outreach using machine learning.", 1],
-  ["RetailSense – Smart Store Analytics", "Retail", "AI-powered shopper insights and predictive inventory management for global retail chains.", 2],
-  ["FinVision – Predictive Finance Dashboard", "Technology", "Real-time forecasting and personalized investment insights using data modeling.", 3],
-  ["MedAssist – Virtual Health Companion", "Healthcare", "AI chatbot and patient tracking platform, improving appointment adherence by 35%.", 4],
-  ["EduMind – Personalized Learning Hub", "AI Learning", "EduMind leverages AI to create tailored learning paths for students, offering real-time progress tracking.", 5],
 ];
 
 const reviews = [
@@ -88,14 +80,14 @@ export default function AboutDetail() {
             </Link>
           </div>
           <div className="ab-projs">
-            {projects.map(([name, chip, desc, n]) => (
-              <article className="ab-pcard" key={name}>
-                <Link className="ab-pcover" to={projectPath(PROJECTS[n - 1].slug)}>
-                  <img src={`/assets/images/71-project-${n}.webp`} alt={`${name} preview`} loading="lazy" />
-                  <span className="ab-chip">{chip}</span>
+            {PROJECTS.slice(0, 5).map((p) => (
+              <article className="ab-pcard" key={p.slug}>
+                <Link className="ab-pcover" to={projectPath(p.slug)}>
+                  <img src={coverSrc(p)} alt={`${p.title} preview`} loading="lazy" />
+                  <span className="ab-chip">{p.chip}</span>
                 </Link>
-                <h4><Link to={projectPath(PROJECTS[n - 1].slug)}>{name}</Link></h4>
-                <p>{desc}</p>
+                <h4><Link to={projectPath(p.slug)}>{p.title}</Link></h4>
+                <p>{p.lead}</p>
               </article>
             ))}
           </div>
