@@ -7,9 +7,20 @@ export const SERVICE_PATHS = [
   "/services/ai-integration-automation/",
   "/services/cloud-architecture-devops/",
   "/services/startup-growth-consulting/",
+  "/services/intelligent-data-insights/",
+  "/services/smart-workflow-automation/",
+  "/services/innovation-strategy-consulting/",
 ];
 export const SERVICE_PATH = SERVICE_PATHS[0];
 export const ABOUT_PATH = "/about-us/";
+export const PROJECTS_PATH = "/our-projects/";
+export const TEAM_PATH = "/our-team/";
+export const BLOG_PATH = "/blog-page/";
+export const CONTACTS_PATH = "/contacts/";
+export const PRICES_PATH = "/prices-page/";
+export const projectPath = (slug) => `/projects/${slug}/`;
+// blog posts live at the site root, like the reference (/<post-slug>/)
+export const postPath = (slug) => `/${slug}/`;
 
 export function useRoute() {
   const [path, setPath] = useState(window.location.pathname);
@@ -35,12 +46,37 @@ export function scrollToSection(hash) {
   window.location.hash = hash;
 }
 
-export function Link({ to, children, ...rest }) {
+// href + client-side click handler, for anchors that can't be a <Link> (e.g. <Reveal as="a">)
+export const goTo = (to) => ({
+  href: to,
+  onClick: (e) => {
+    e.preventDefault();
+    navigate(to);
+    window.scrollTo(0, 0);
+  },
+});
+
+// link to a section of the home page (e.g. "#services") from any route
+export const sectionLink = (hash) => ({
+  href: `/${hash}`,
+  onClick: (e) => {
+    e.preventDefault();
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => scrollToSection(hash), 80);
+    } else {
+      scrollToSection(hash);
+    }
+  },
+});
+
+export function Link({ to, children, onClick, ...rest }) {
   return (
     <a
       href={to}
       {...rest}
       onClick={(e) => {
+        onClick?.(e);
         e.preventDefault();
         navigate(to);
         window.scrollTo(0, 0);

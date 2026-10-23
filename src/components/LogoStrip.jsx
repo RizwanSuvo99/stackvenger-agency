@@ -1,9 +1,10 @@
 import Reveal from "./Reveal";
 
-const logos = Array.from({ length: 8 }, (_, i) => `/assets/icons/71-partner-${i + 1}.svg`);
+// reference carousel uses partners 1–5, laid out 5 → 1
+const logos = [5, 4, 3, 2, 1].map((n) => `/assets/icons/71-partner-${n}.svg`);
 
 export default function LogoStrip() {
-  const loop = [...logos, ...logos];
+  const loop = [...logos, ...logos, ...logos];
   return (
     <section className="trust">
       <div className="container">

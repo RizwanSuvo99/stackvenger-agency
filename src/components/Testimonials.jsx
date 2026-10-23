@@ -1,12 +1,14 @@
+import { useState } from "react";
 import Reveal from "./Reveal";
 import { Star } from "./icons";
+import { VideoLightbox } from "./PageParts";
 
 function QuoteCard({ t, delay }) {
   return (
     <Reveal className="testi-card" delay={delay}>
       <span className="stars-row" aria-label="5 out of 5 stars">
         {Array.from({ length: 5 }).map((_, s) => (
-          <Star size={21} key={s} />
+          <Star size={20} key={s} />
         ))}
       </span>
       <p className="testi-quote">“{t.quote}”</p>
@@ -15,12 +17,12 @@ function QuoteCard({ t, delay }) {
   );
 }
 
-function MediaCard({ src, delay }) {
+function MediaCard({ src, delay, onPlay }) {
   return (
     <Reveal delay={delay}>
       <div className="testi-media">
         <img src={src} alt="Client video story" loading="lazy" />
-        <button className="play-mini" aria-label="Play client story">
+        <button className="play-mini" aria-label="Play client story" onClick={onPlay}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M8 5.5l11 6.5-11 6.5v-13z" />
           </svg>
@@ -33,6 +35,7 @@ function MediaCard({ src, delay }) {
 const col = {
   a1: {
     quote: "Softy Solutions took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!",
+    who: "Alex Carter, Founder of Taskify",
   },
   a2: {
     quote: "Softy Solutions turned our scattered idea into a polished MVP in under two months. The AI-driven workflow saved us months of trial and error.",
@@ -49,8 +52,9 @@ const col = {
 };
 
 export default function Testimonials() {
+  const [video, setVideo] = useState(null);
   return (
-    <section className="section testi-sec" id="testimonials" style={{ paddingTop: 93 }}>
+    <section className="section testi-sec" id="testimonials" style={{ paddingTop: 0, marginTop: 150 }}>
       <div className="art-wrap" aria-hidden="true">
         <img className="art-img" src="/assets/images/71-home-1-background-3.webp" alt="" />
       </div>
@@ -71,14 +75,15 @@ export default function Testimonials() {
           </div>
           <div className="testi-col">
             <QuoteCard t={col.b1} delay={140} />
-            <MediaCard src="/assets/images/71-home-1-8.webp" delay={200} />
+            <MediaCard src="/assets/images/71-home-1-8.webp" delay={200} onPlay={() => setVideo("UvMlRU88SV0")} />
           </div>
           <div className="testi-col">
-            <MediaCard src="/assets/images/71-home-1-7.webp" delay={160} />
+            <MediaCard src="/assets/images/71-home-1-7.webp" delay={160} onPlay={() => setVideo("aDhPaFgP1ok")} />
             <QuoteCard t={col.c1} delay={240} />
           </div>
         </div>
       </div>
+      {video ? <VideoLightbox id={video} onClose={() => setVideo(null)} /> : null}
     </section>
   );
 }

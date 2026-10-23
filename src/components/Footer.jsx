@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Facebook, Instagram, XTwitter } from "./icons";
-import { Link, ABOUT_PATH } from "../router";
+import { Link, sectionLink, ABOUT_PATH, BLOG_PATH, CONTACTS_PATH } from "../router";
 
 const nav = [
   ["About Us", ABOUT_PATH],
   ["Our Services", "#services"],
-  ["Blog Page", "#top"],
-  ["Shop", "#top"],
-  ["Contacts", "#contact"],
+  ["Blog Page", BLOG_PATH],
+  ["Contacts", CONTACTS_PATH],
 ];
 
 const socials = [
@@ -16,7 +15,7 @@ const socials = [
   ["X (Twitter)", <XTwitter size={19} key="x" />, "https://x.com/"],
 ];
 
-export default function Footer({ onOpenContact, variant, activeNav }) {
+export default function Footer({ onOpenContact, variant, activeNav, slim }) {
   const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
@@ -27,35 +26,41 @@ export default function Footer({ onOpenContact, variant, activeNav }) {
   }, []);
 
   return (
-    <footer className={`footer${variant ? " footer--" + variant : ""}`} id="contact">
+    <footer className={`footer${variant ? " footer--" + variant : ""}${slim ? " footer--slim" : ""}`} id="contact">
       <div className="art-wrap" aria-hidden="true">
-        <img className="art-img footer-art" src="/assets/images/71-background-footer-1-1.webp" alt="" />
+        <img
+          className="art-img footer-art"
+          src={slim ? "/assets/images/71-background-footer-1.webp" : "/assets/images/71-background-footer-1-1.webp"}
+          alt=""
+        />
       </div>
 
-      <div className="footer-cta">
-        <div className="container">
-          <span className="kicker-pill">Your Product Could Be Next</span>
-          <h2 className="display-title gradient-text">
-            Let&apos;s Build Your
-            <br />
-            Next Big Thing
-            <br />
-            Together
-          </h2>
-          <p>
-            With Softy Solutions, you don&apos;t just build faster — you build smarter.
-            Let&apos;s make your launch unforgettable.
-          </p>
-          <div className="hero-cta">
-            <button className="btn" onClick={onOpenContact}>
-              <ArrowRight size={20} className="btn-arrow" /> Get Started Now
-            </button>
-            <a className="btn btn-outline" href="tel:+12345678900">
-              <ArrowRight size={20} className="btn-arrow" /> Schedule a Demo
-            </a>
+      {slim ? null : (
+        <div className="footer-cta">
+          <div className="container">
+            <span className="kicker-pill">Your Product Could Be Next</span>
+            <h2 className="display-title gradient-text">
+              Let&apos;s Build Your
+              <br />
+              Next Big Thing
+              <br />
+              Together
+            </h2>
+            <p>
+              With Softy Solutions, you don&apos;t just build faster — you build smarter.
+              Let&apos;s make your launch unforgettable.
+            </p>
+            <div className="hero-cta">
+              <button className="btn" onClick={onOpenContact}>
+                <ArrowRight size={20} className="btn-arrow" /> Get Started Now
+              </button>
+              <Link className="btn btn-outline" to={CONTACTS_PATH}>
+                <ArrowRight size={20} className="btn-arrow" /> Schedule a Demo
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="footer-bottom">
         <div className="container">
@@ -66,7 +71,7 @@ export default function Footer({ onOpenContact, variant, activeNav }) {
                   {label}
                 </Link>
               ) : (
-                <a key={label} href={href}>{label}</a>
+                <a key={label} {...sectionLink(href)}>{label}</a>
               )
             )}
           </nav>

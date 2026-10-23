@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import { ArrowRight } from "./icons";
+import { Link, TEAM_PATH } from "../router";
 
 const people = [
   { name: "Ethan White", role: "AI Solutions Architect", img: "/assets/images/71-profile-1.webp" },
@@ -13,7 +14,7 @@ export default function Team() {
     <section
       className="section"
       id="team"
-      style={{ paddingTop: 215, paddingBottom: 157 }}
+      style={{ paddingTop: 151, paddingBottom: 150 }}
     >
       <div className="container">
         <Reveal className="section-head">
@@ -23,7 +24,7 @@ export default function Team() {
             <br />
             Machines
           </h2>
-          <p className="sub-line" style={{ maxWidth: 640 }}>
+          <p className="sub-line" style={{ maxWidth: 680 }}>
             Our team blends creativity, technical skill, and strategic thinking with AI
             innovation — so your product gets the best of both worlds.
           </p>
@@ -47,10 +48,10 @@ export default function Team() {
       </div>
 
       <div className="container">
-        <Reveal className="projects-more" delay={120} style={{ marginTop: 79 }}>
-          <a className="btn" href="#contact">
+        <Reveal className="projects-more" delay={120} style={{ marginTop: 80 }}>
+          <Link className="btn" to={TEAM_PATH}>
             <ArrowRight size={20} className="btn-arrow" /> Meet the Team
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

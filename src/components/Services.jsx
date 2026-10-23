@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import { Glyph } from "./cmsIcons";
 import { ArrowRight } from "./icons";
+import { Link, goTo, SERVICE_PATHS, CONTACTS_PATH } from "../router";
 
 const services = [
   {
@@ -35,9 +36,9 @@ const services = [
   },
 ];
 
-export default function Services({ onOpenContact }) {
+export default function Services() {
   return (
-    <section className="section" id="services" style={{ paddingTop: 116 }}>
+    <section className="section" id="services" style={{ paddingTop: 195 }}>
       <div className="container">
         <Reveal className="section-head">
           <span className="kicker-pill">Our Services</span>
@@ -46,14 +47,14 @@ export default function Services({ onOpenContact }) {
             <br />
             Fast-Growing Startups
           </h2>
-          <p className="sub-line">Coding, strategy, and AI in perfect sync — one integrated team.</p>
+          <p className="sub-line">Code, strategy, and AI in perfect sync.</p>
         </Reveal>
 
         <div className="service-grid">
           {services.map((s, i) => (
             <Reveal
               as="a"
-              href="#contact"
+              {...goTo(SERVICE_PATHS[i])}
               className="service-card"
               key={s.title}
               delay={(i % 3) * 90}
@@ -70,9 +71,9 @@ export default function Services({ onOpenContact }) {
 
         <Reveal className="svc-more" delay={120}>
           <p className="ready-label">Ready to Innovate?</p>
-          <a className="btn" href="#contact" onClick={(e) => { e.preventDefault(); onOpenContact?.(); }}>
+          <Link className="btn" to={CONTACTS_PATH}>
             <ArrowRight size={18} className="btn-arrow" /> Start Your Project
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

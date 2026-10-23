@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Reveal from "./Reveal";
 import { ArrowRight } from "./icons";
+import { Link, ABOUT_PATH, CONTACTS_PATH } from "../router";
 
 function VideoCard() {
   const [playing, setPlaying] = useState(false);
@@ -34,7 +35,7 @@ function VideoCard() {
   );
 }
 
-export default function Hero({ onOpenContact }) {
+export default function Hero() {
   const avatars = Array.from({ length: 5 }, (_, n) => `/assets/images/71-home-1-client-${n + 1}.webp`);
   return (
     <section className="hero" id="top">
@@ -74,12 +75,12 @@ export default function Hero({ onOpenContact }) {
 
         <Reveal delay={380}>
           <div className="hero-cta">
-            <button className="btn" onClick={onOpenContact}>
+            <Link className="btn" to={CONTACTS_PATH}>
               <ArrowRight size={20} className="btn-arrow" /> Start Your Project
-            </button>
-            <a className="btn btn-outline" href="#services">
+            </Link>
+            <Link className="btn btn-outline" to={ABOUT_PATH}>
               <ArrowRight size={20} className="btn-arrow" /> See Our Process
-            </a>
+            </Link>
           </div>
         </Reveal>
 

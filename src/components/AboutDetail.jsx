@@ -1,4 +1,6 @@
 import { ArrowRight, Star } from "./icons";
+import { Link, TEAM_PATH, PROJECTS_PATH, projectPath } from "../router";
+import { PROJECTS } from "../data/projects";
 
 const team = [
   ["Ethan White", "AI Solutions Architect", 1],
@@ -23,8 +25,6 @@ const reviews = [
   ["Their engineers are not only skilled but also very responsive. From concept to deployment, they provided outstanding support and helped us scale our smart devices faster.", 5, "Jessie L.", "CEO at CircuitWave"],
   ["The collaboration was smooth and transparent. They delivered high-quality embedded solutions that perfectly matched our hardware requirements. Highly recommended for any tech-driven business.", 5, "Luis F.", "R&D Director at MicroLogic Systems"],
 ];
-
-const dead = (e) => e.preventDefault();
 
 export default function AboutDetail() {
   return (
@@ -66,15 +66,15 @@ export default function AboutDetail() {
             {team.map(([name, role, n]) => (
               <div className="ab-tcard" key={name}>
                 <img src={`/assets/images/71-profile-${n}.webp`} alt={`${name}, ${role}`} loading="lazy" />
-                <a href="#" onClick={dead}>{name}</a>
+                <Link to={TEAM_PATH}>{name}</Link>
                 <span>{role}</span>
               </div>
             ))}
           </div>
           <div className="ab-cta-row">
-            <a className="btn" href="#team" onClick={dead}>
+            <Link className="btn" to={TEAM_PATH}>
               <ArrowRight size={12} className="btn-arrow" /> Meet the Team
-            </a>
+            </Link>
           </div>
       </section>
 
@@ -83,18 +83,18 @@ export default function AboutDetail() {
           <div className="ab-proj-head">
             <span className="ab-pill">What we offer</span>
             <h2 className="fit">Explore Our Projects</h2>
-            <a className="ab-proj-btn btn" href="#projects" onClick={dead}>
+            <Link className="ab-proj-btn btn" to={PROJECTS_PATH}>
               <ArrowRight size={12} className="btn-arrow" /> View All Projects
-            </a>
+            </Link>
           </div>
           <div className="ab-projs">
             {projects.map(([name, chip, desc, n]) => (
               <article className="ab-pcard" key={name}>
-                <span className="ab-pcover">
+                <Link className="ab-pcover" to={projectPath(PROJECTS[n - 1].slug)}>
                   <img src={`/assets/images/71-project-${n}.webp`} alt={`${name} preview`} loading="lazy" />
                   <span className="ab-chip">{chip}</span>
-                </span>
-                <h4>{name}</h4>
+                </Link>
+                <h4><Link to={projectPath(PROJECTS[n - 1].slug)}>{name}</Link></h4>
                 <p>{desc}</p>
               </article>
             ))}

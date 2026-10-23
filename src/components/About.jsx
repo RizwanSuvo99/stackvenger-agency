@@ -1,33 +1,18 @@
 import Reveal from "./Reveal";
 import { Glyph } from "./cmsIcons";
 import { ArrowRight } from "./icons";
+import { Link, ABOUT_PATH } from "../router";
 
 const features = [
-  {
-    glyph: "shape_1",
-    title: "AI-Generated Prototypes",
-    text: "Wireframes and interactive mockups in hours, not weeks.",
-  },
-  {
-    glyph: "shape_2",
-    title: "Accelerated Development",
-    text: "AI-assisted coding speeds up delivery.",
-  },
-  {
-    glyph: "shape_3",
-    title: "Smart QA Testing",
-    text: "Automated suites catch fewer-reached bugs earlier.",
-  },
-  {
-    glyph: "shape_4",
-    title: "Full Support",
-    text: "A dedicated team to guide you every step of the way.",
-  },
+  { glyph: "shape_2", title: "AI-Generated Prototypes", text: "Get wireframes and mockups in hours, not weeks." },
+  { glyph: "shape_3", title: "Accelerated Development", text: "AI-assisted coding speeds up delivery." },
+  { glyph: "shape_4", title: "Smart QA Testing", text: "AI-driven testing for fewer bugs and smoother launches." },
+  { glyph: "shape_5", title: "Full Support", text: "A dedicated team to guide you every step of the way." },
 ];
 
 export default function About() {
   return (
-    <section className="section" id="about" style={{ paddingTop: 60 }}>
+    <section className="section" id="about" style={{ paddingTop: 0 }}>
       <div className="container">
         <Reveal>
           <p className="statement">
@@ -38,9 +23,9 @@ export default function About() {
         </Reveal>
 
         <Reveal delay={140} className="section-cta">
-          <a className="btn" href="#services">
+          <Link className="btn" to={ABOUT_PATH}>
             <ArrowRight size={20} className="btn-arrow" /> Find Out More
-          </a>
+          </Link>
         </Reveal>
       </div>
       <div className="container-fluid">

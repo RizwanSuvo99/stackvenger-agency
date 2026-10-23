@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Chevron, Close, Menu, Search } from "./icons";
-import { Link, navigate as navGo, scrollToSection, SERVICE_PATH, SERVICE_PATHS, ABOUT_PATH } from "../router";
+import { ArrowRight, Chevron, ChevronRight, Close, Menu, Search } from "./icons";
+import SearchModal from "./SearchModal";
+import {
+  Link, navigate as navGo, scrollToSection, SERVICE_PATH, SERVICE_PATHS, ABOUT_PATH,
+  PROJECTS_PATH, TEAM_PATH, BLOG_PATH, CONTACTS_PATH, PRICES_PATH,
+} from "../router";
 
 const services = [
   "AI-Accelerated Product Development",
@@ -11,44 +15,12 @@ const services = [
   "Startup Growth Consulting",
 ];
 
-const demoTiles = [
-  ["Home One Dark", "/assets/images/71-megamenu-dark-1.webp", 278, 228],
-  ["Home Two Dark", "/assets/images/71-megamenu-dark-2.webp", 278, 228],
-  ["Home One Light", "/assets/images/71-megamenu-light-1.webp", 281, 231],
-  ["Home Two Light", "/assets/images/71-megamenu-light-2.webp", 281, 231],
-];
-
 const pages = [
   ["About Us", ABOUT_PATH],
-  ["Our Projects", "#projects"],
-  ["Our Team", "#team"],
-  ["Blog", "#top"],
-  ["Shop", "#top"],
-  ["Image Credits", "#top"],
+  ["Our Projects", PROJECTS_PATH],
+  ["Our Team", TEAM_PATH],
+  ["Blog", BLOG_PATH],
 ];
-
-function HomeMega() {
-  return (
-    <div className="mega mega-home">
-      <div className="mh-col mh-dark">
-        {demoTiles.slice(0, 2).map(([t, src, w, h]) => (
-          <a className="mh-tile" href="#top" key={t}>
-            <img src={src} alt="" width={w} height={h} loading="lazy" />
-            <span>{t}</span>
-          </a>
-        ))}
-      </div>
-      <div className="mh-col mh-light">
-        {demoTiles.slice(2).map(([t, src, w, h]) => (
-          <a className="mh-tile" href="#top" key={t}>
-            <img src={src} alt="" width={w} height={h} loading="lazy" />
-            <span>{t}</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function ServicesMega() {
   return (
@@ -62,22 +34,18 @@ function ServicesMega() {
           ["AI Integration & Automation", "", SERVICE_PATHS[3]],
           ["Cloud Architecture & DevOps", "", SERVICE_PATHS[4]],
           ["Startup Growth Consulting", "", SERVICE_PATHS[5]],
-        ].map(([a, b, to]) =>
-          to ? (
-            <Link className="msv-item" to={to} key={a}>{a}{b ? (<><br />{b}</>) : null}</Link>
-          ) : (
-            <a className="msv-item" href="#" key={a} onClick={(e) => e.preventDefault()}>{a}{b ? (<><br />{b}</>) : null}</a>
-          )
-        )}
+        ].map(([a, b, to]) => (
+          <Link className="msv-item" to={to} key={a}>{a}{b ? (<><br />{b}</>) : null}</Link>
+        ))}
       </div>
       <div className="msv-right">
         <h5>
           Every project starts with
           <br />a conversation
         </h5>
-        <button className="megabtn" type="button">
+        <Link className="megabtn" to={CONTACTS_PATH}>
           <ArrowRight size={20} className="btn-arrow" /> Get in Touch
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -100,6 +68,7 @@ function PagesDrop({ route }) {
 export default function Header({ onOpenContact, route }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -148,34 +117,32 @@ export default function Header({ onOpenContact, route }) {
 
           <nav className="nav-pill" aria-label="Primary">
             <ul>
-              <li className="nav-item nav-has-mega" onMouseEnter={(e) => alignMega(e, 1345)} onMouseLeave={navEnd}>
-                <Link to="/" className="nav-link">
-                  Home <Chevron size={12} className="chev" />
-                </Link>
-                <HomeMega />
+              <li className="nav-item">
+                <Link to="/" className={`nav-link${route === "/" ? " is-cur" : ""}`}>Home</Link>
               </li>
               <li className="nav-item nav-has-mega" onMouseEnter={(e) => alignMega(e, 729, true)} onMouseLeave={navEnd}>
                 <a href="#services" className="nav-link" onClick={goSection("#services")}>
-                  Services <Chevron size={12} className="chev" />
+                  Services <ChevronRight size={10} className="chev" />
                 </a>
                 <ServicesMega />
               </li>
               <li className="nav-item">
-                <a href="#pricing" className="nav-link" onClick={goSection("#pricing")}>Pricing</a>
+                <Link to={PRICES_PATH} className={`nav-link${route === PRICES_PATH ? " is-cur" : ""}`}>Pricing</Link>
               </li>
-              <li className="nav-item" onMouseEnter={(e) => alignMega(e, 0)} onMouseLeave={navEnd}>
-                <a href="#top" className="nav-link" onClick={(e) => e.preventDefault()}>
-                  Pages <Chevron size={12} className="chev" />
-                </a>
+              <li className="nav-item" onMouseEnter={(e) => alignMega(e, 0)} onMouseLeave={navEnd} onFocus={(e) => alignMega({ currentTarget: e.currentTarget }, 0)}>
+                {/* no page of its own: opens the dropdown (hover, click or keyboard focus) */}
+                <button type="button" className="nav-link" aria-haspopup="true" onClick={(e) => e.currentTarget.focus()}>
+                  Pages <ChevronRight size={10} className="chev" />
+                </button>
                 <PagesDrop route={route} />
               </li>
               <li className="nav-item">
-                <a href="#contact" className="nav-link" onClick={goSection("#contact")}>Contacts</a>
+                <Link to={CONTACTS_PATH} className={`nav-link${route === CONTACTS_PATH ? " is-cur" : ""}`}>Contacts</Link>
               </li>
               <li className="nav-item">
-                <a href="#top" className="nav-link search" aria-label="Search" onClick={(e) => e.preventDefault()}>
-                  <Search size={17} />
-                </a>
+                <button type="button" className="nav-link search" aria-label="Search" onClick={() => setSearchOpen(true)}>
+                  <Search size={21} />
+                </button>
               </li>
             </ul>
           </nav>
@@ -196,26 +163,24 @@ export default function Header({ onOpenContact, route }) {
         </div>
       </header>
 
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+
       <div className={`mobile-menu ${open ? "open" : ""}`} onClick={(e) => {
         if (e.target.tagName === "A" || e.target.tagName === "BUTTON") setOpen(false);
       }}>
         <div className="m-group">
-          <div className="m-label">Home <Chevron size={15} /></div>
-          <div className="m-sub">
-            <a href="#top">Home One Dark</a>
-            <a href="#top">Home Two Dark</a>
-          </div>
+          <Link to="/" className="m-link">Home</Link>
         </div>
         <div className="m-group">
           <div className="m-label">Services <Chevron size={15} /></div>
           <div className="m-sub">
-            {services.map((s) => (
-              <a key={s} href="#services">{s}</a>
+            {services.map((s, i) => (
+              <Link key={s} to={SERVICE_PATHS[i]}>{s}</Link>
             ))}
           </div>
         </div>
         <div className="m-group">
-          <a href="#pricing" className="m-link">Pricing</a>
+          <Link to={PRICES_PATH} className="m-link">Pricing</Link>
         </div>
         <div className="m-group">
           <div className="m-label">Pages <Chevron size={15} /></div>
@@ -230,7 +195,7 @@ export default function Header({ onOpenContact, route }) {
           </div>
         </div>
         <div className="m-group">
-          <a href="#contact" className="m-link">Contacts</a>
+          <Link to={CONTACTS_PATH} className="m-link">Contacts</Link>
         </div>
         <div className="m-cta">
           <button className="btn" onClick={onOpenContact}>

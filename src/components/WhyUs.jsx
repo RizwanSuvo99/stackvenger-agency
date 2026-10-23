@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
-import { LogoMark } from "./icons";
+import { Glyph } from "./cmsIcons";
 
-const words = ["a custom app", "a SaaS platform", "an AI copilot", "an online store"];
+const words = ["a SaaS platform", "a custom app"];
 
 function Rotator() {
   const [i, setI] = useState(0);
@@ -28,7 +28,7 @@ function Rotator() {
 
 export default function WhyUs() {
   return (
-    <section className="section" id="why" style={{ paddingTop: 155 }}>
+    <section className="section" id="why" style={{ paddingTop: 150 }}>
       <div className="container">
         <Reveal className="section-head">
           <span className="kicker-pill">Why Choose Us</span>
@@ -87,8 +87,8 @@ export default function WhyUs() {
 
         <Reveal delay={120}>
           <div className="fancy-wrap">
-            <LogoMark size={64} />
             <h3 className="fancy-line">
+              <Glyph name="shape_1" size={48} className="fancy-ico" />
               Softy Solutions can help you with <Rotator />
             </h3>
           </div>
