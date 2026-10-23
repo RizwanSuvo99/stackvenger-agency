@@ -1000,6 +1000,124 @@ export const PROJECTS = [
         "Users, bookings, content approvals, marketplace products, subscription plans, badges, analytics exports, and platform settings such as commission rate and maintenance mode."
       ]
     ]
+  },
+  {
+    "slug": "optivo-solutions-consulting-website",
+    "title": "Optivo Solutions – Business Operations Consulting Website",
+    "chip": "Web Design",
+    "lead": "A clean, conversion-focused home page for an operations consultancy, with services, role-based solutions, testimonials and a built-in free-consultation booking flow, designed in three colour directions.",
+    "cover": "/assets/images/project-optivo-cover.webp",
+    "galleryImgs": [
+      "/assets/images/project-optivo-1.webp",
+      "/assets/images/project-optivo-2.webp",
+      "/assets/images/project-optivo-3.webp",
+      "/assets/images/project-optivo-4.webp",
+      "/assets/images/project-optivo-5.webp",
+      "/assets/images/project-optivo-6.webp",
+      "/assets/images/project-optivo-7.webp",
+      "/assets/images/project-optivo-8.webp"
+    ],
+    "when": [
+      "Start: September 2026",
+      "End: October 2026"
+    ],
+    "status": "Design Completed",
+    "authorOverride": [
+      "StackVenger Team",
+      "Web Design",
+      "/assets/icons/logo-mark.svg"
+    ],
+    "body": [
+      "Optivo Solutions helps founders and operations leaders streamline processes, automate repetitive work and scale efficiently, from early-stage startups to established enterprises. We designed the company's home page: one page that has to explain the offer, build trust quickly and turn visitors into booked consultations. The result is bright, structured and calm, just like the service it sells.",
+      "The hero opens with \"Optimize Your Business Operations & Growth\", with the key word highlighted in a solid blue marker. Two clear calls to action, Start Your Transformation and Learn More, sit next to a layered photo collage of the team at work and a small Net Sales chart card that hints at measurable results. Below it, a strip of trusted technology partners adds instant credibility.",
+      "The page then tells the story in order. \"Discover Our Services\" presents Process Optimization, Strategic Consulting and Team Development as wide rows, each with a photo, a short pitch, a checklist of what's included and a View Details link. The featured service is highlighted as a solid card. A tabbed \"Comprehensive Solutions for Every Role\" block speaks directly to founders, operations leads and teams, followed by a customer testimonial carousel.",
+      "Conversion happens without leaving the page. In \"Ready to Transform Your Business?\", visitors fill in a short form (name, company, email, the service they want and a message), then pick a date and time on an inline calendar with time-zone support, and book a free consultation. A \"Boost Your Success with Our 100% Guarantee\" banner and a footer with quick links, legal pages and contact details close the page.",
+      "We explored the design in three colour directions so the client could choose the personality of the brand: a soft light-blue version, a vivid blue version with the Optivo Solutions logo, and a sharp monochrome version with black accents. All three share the same layout, spacing and components, so the chosen direction can go straight into development."
+    ],
+    "faq": [
+      [
+        "What was designed for Optivo Solutions?",
+        "The complete home page: hero, technology partners, services, role-based solutions, testimonials, the consultation booking section, the guarantee banner and the footer."
+      ],
+      [
+        "Why three colour directions?",
+        "To let the client choose the brand's personality: soft light blue, vivid blue with the Optivo logo, or monochrome with black accents. They all share one layout and component set."
+      ],
+      [
+        "How does the consultation booking work?",
+        "Visitors fill in a short form with their name, company, email, the service they want and a message, then pick a date and time on an inline calendar with time-zone selection, all on the same page."
+      ],
+      [
+        "Who is the website aimed at?",
+        "Founders, operations leads and growing teams. The role-specific tabs let each visitor quickly see how Optivo helps their part of the business."
+      ],
+      [
+        "Is the design ready for development?",
+        "Yes. The page uses consistent spacing, typography and reusable sections, so it can be built in any modern framework or CMS."
+      ]
+    ]
+  },
+  {
+    "slug": "topproczar-business-suite-redesign",
+    "title": "Topproczar – All-in-One Business Suite Website & Dashboard Redesign",
+    "chip": "SaaS",
+    "lead": "A full redesign of Topproczar, a modular business platform for accounting, CRM, HRM, POS and projects: a conversion-focused marketing site with add-on pricing, plus a cleaner, faster admin dashboard.",
+    "cover": "/assets/images/project-topproczar-cover.webp",
+    "galleryImgs": [
+      "/assets/images/project-topproczar-1.webp",
+      "/assets/images/project-topproczar-2.webp",
+      "/assets/images/project-topproczar-3.webp",
+      "/assets/images/project-topproczar-4.webp",
+      "/assets/images/project-topproczar-5.webp",
+      "/assets/images/project-topproczar-6.webp",
+      "/assets/images/project-topproczar-7.webp",
+      "/assets/images/project-topproczar-8.webp",
+      "/assets/images/project-topproczar-9.webp",
+      "/assets/images/project-topproczar-10.webp",
+      "/assets/images/project-topproczar-11.webp",
+      "/assets/images/project-topproczar-12.webp",
+      "/assets/images/project-topproczar-13.webp",
+      "/assets/images/project-topproczar-14.webp"
+    ],
+    "when": [
+      "Start: October 2024",
+      "End: August 2025"
+    ],
+    "status": "Design Completed",
+    "authorOverride": [
+      "StackVenger Team",
+      "Product Design",
+      "/assets/icons/logo-mark.svg"
+    ],
+    "body": [
+      "Topproczar is an all-in-one business platform that lets companies \"take care of each need of their business functions in one place\". Accounting, HRM, CRM, POS, project management and payments are each available as an add-on module. We redesigned both sides of the product: the public marketing website that sells the packages, and the admin dashboard where customers actually run their business. The new identity is a fresh, confident green with plenty of white space, rounded cards and clear hierarchy.",
+      "The website opens with a limited-time offer bar and a bold green hero that shows the product in a device frame, with Get the Package and Topproczar calls to action. Value cards highlight free and open-source foundations, growth and 24/7 support. A \"Why choose dedicated modules for your business?\" timeline walks through each module (accounting and billing, HRM, CRM, projects, customers and vendors), pairing real dashboard screens with short benefit-led copy. Further down, \"Built with Technology You Can Trust\" explains the Laravel foundation, alongside testimonials and a dedicated eCommerce fashion-theme package.",
+      "Every add-on has its own detail page, such as Accounting at $50/month or $500/year, with a hero, feature walkthroughs (accounting and billing, inventory, proposal-to-payment and reports) and cross-links to the other modules. The Simple Pricing page lets buyers start from a Basic Package and toggle add-ons like Accounting, HRM, CRM, POS, Stripe and Project. They can set the number of workspaces and users, switch between monthly and yearly billing, see the total update live, and check out through a payment-details step. Login, registration, email confirmation, About, Terms and Privacy pages complete the site.",
+      "The redesigned dashboard brings a consistent layout, a collapsible sidebar, workspace switching and a language selector to every module. The Accounting dashboard summarises customers, vendors, invoices and bills, with account balances, cashflow, income-versus-expense trends and category breakdowns. The CRM dashboard tracks recently created and modified deals, deal calls by day and deals by stage, with dedicated screens for leads, pipelines, deal management and CSV imports.",
+      "Behind these sit complete back-office flows. Invoices, proposals and bills have setup screens for categories, units and tax rates. There are purchases and warehouses with stock transfers, banking accounts, a chart of accounts and transfers, plus revenue, credit notes, payments and debit notes. Customer and vendor profiles have tabs for invoices, proposals, projects and statements. Reports cover profit and loss, income vs expense, tax, transactions and account statements. User management includes roles with granular, colour-coded permissions and activity logs, turning a dense ERP into something teams can learn quickly."
+    ],
+    "faq": [
+      [
+        "What is Topproczar?",
+        "A modular business platform where companies pick the add-ons they need (Accounting, HRM, CRM, POS, Stripe payments and Project management) and run them from one dashboard."
+      ],
+      [
+        "What was redesigned?",
+        "Both the marketing website (home, add-on details, pricing, payment, auth and legal pages) and the admin dashboard (accounting, CRM, invoices, purchases, banking, reports and user management)."
+      ],
+      [
+        "How does the pricing page work?",
+        "Buyers start with the Basic Package, toggle the add-ons they want, choose the number of workspaces and users, and switch between monthly and yearly billing, with the total updating live before checkout."
+      ],
+      [
+        "How did the dashboard redesign improve usability?",
+        "It applies one consistent layout, sidebar and component set across every module, adds clear summary cards and charts on each dashboard, and organises dense accounting flows into simple list, create and detail screens."
+      ],
+      [
+        "How are permissions handled?",
+        "Admins create roles such as client, staff or HR and assign granular permissions for each module from colour-coded permission chips. User activity logs give full visibility."
+      ]
+    ]
   }
 ];
 
