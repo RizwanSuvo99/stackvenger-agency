@@ -442,6 +442,11 @@ hr { border: 0; }
 /* the promo is a 16:9 composition with text near its edges: never crop it */
 .video-card--promo, .video-card--promo video, .video-card--promo img { aspect-ratio: 16 / 9; }
 .video-card--promo video, .video-card--promo img { object-fit: contain; }
+/* the promo's dark edges blend into the page: outline the card with a white border + soft glow */
+.video-card--promo {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 48px rgba(255, 255, 255, 0.14), 0 30px 80px rgba(0, 0, 0, 0.6);
+}
 .sound-btn {
   position: absolute;
   right: 18px;
