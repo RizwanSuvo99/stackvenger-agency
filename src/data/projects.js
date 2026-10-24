@@ -64,7 +64,7 @@ export const PROJECTS = [
   },
   {
     "slug": "jmk-furniture-online-showroom",
-    "title": "JMK Furniture – Online Showroom & Catalogue",
+    "title": "JMK Furniture – Online Furniture Showroom & Ordering Platform",
     "chip": "Retail",
     "lead": "A bilingual furniture showroom with WhatsApp ordering and a full content-managed admin panel.",
     "cover": "/assets/images/project-jmk-cover.webp",
@@ -119,7 +119,7 @@ export const PROJECTS = [
     "slug": "renovate-saas-dashboard",
     "title": "Renovate – Customizable SaaS Admin Dashboard",
     "chip": "SaaS",
-    "lead": "A 24-page dashboard template with a live theme customizer, page builder and full dark and light modes.",
+    "lead": "A 24-page SaaS admin dashboard with a live theme customizer, page builder and full dark and light modes.",
     "cover": "/assets/images/project-renovate-cover.webp",
     "heroPos": "0% 50%",
     "galleryImgs": [
@@ -150,7 +150,7 @@ export const PROJECTS = [
     "faq": [
       [
         "What is Renovate?",
-        "Renovate is a production-grade SaaS admin dashboard template. It gives a new product a complete, good-looking back office — analytics, CRM, orders, invoices, calendar, Kanban, messaging and admin tools — so teams can focus on their core features instead of rebuilding dashboard basics."
+        "Renovate is a production-grade SaaS admin dashboard. It gives a new product a complete, good-looking back office — analytics, CRM, orders, invoices, calendar, Kanban, messaging and admin tools — so teams can focus on their core features instead of rebuilding dashboard basics."
       ],
       [
         "Does it support dark and light mode?",
@@ -166,15 +166,15 @@ export const PROJECTS = [
       ],
       [
         "Can it use a real database?",
-        "Yes. Every entity goes through a repository interface. The demo uses a lightweight file-based store, and switching to PostgreSQL or MongoDB means implementing that interface once — pages, widgets and API routes stay exactly the same."
+        "Yes. Every entity goes through a repository interface. It ships with a lightweight file-based store, and switching to PostgreSQL or MongoDB means implementing that interface once — pages, widgets and API routes stay exactly the same."
       ]
     ]
   },
   {
     "slug": "global-travels-flight-booking",
-    "title": "Global Travels – Flight Booking Experience",
+    "title": "Global Travels – Flight Search & Booking Platform",
     "chip": "Travel",
-    "lead": "A flight search and booking front end with multi-city trips, live airport search, smart filters and checkout.",
+    "lead": "A complete flight booking platform with round-trip, one-way and multi-city search, live airport lookup, smart filters, secure checkout and downloadable invoices.",
     "cover": "/assets/images/project-globaltravels-cover.webp",
     "galleryImgs": [
       "/assets/images/project-globaltravels-1.webp",
@@ -279,7 +279,7 @@ export const PROJECTS = [
   },
   {
     "slug": "veyborn-luxury-watch-store",
-    "title": "Veyborn – Luxury Watch Online Store",
+    "title": "Veyborn – Luxury Watch E-commerce Store",
     "chip": "E-commerce",
     "lead": "A premium watch boutique with a flat editorial design, full dark and light modes and a complete admin back office.",
     "cover": "/assets/images/project-veyborn-cover.webp",
@@ -389,7 +389,7 @@ export const PROJECTS = [
   },
   {
     "slug": "al-noor-restaurant-website",
-    "title": "Al Noor Restaurant – Royal Bengali Dining Website",
+    "title": "Al Noor Restaurant – Bengali Restaurant Website & Online Ordering",
     "chip": "Restaurant",
     "lead": "An editorial restaurant website with a bilingual menu, order bag, WhatsApp ordering and table requests.",
     "cover": "/assets/images/project-alnoor-cover.webp",
@@ -443,7 +443,7 @@ export const PROJECTS = [
   },
   {
     "slug": "paradise-hotel-himalayan-resort",
-    "title": "Paradise Hotel – Himalayan Hotel & Resort Website",
+    "title": "Paradise Hotel – Himalayan Resort Website & Booking",
     "chip": "Hospitality",
     "lead": "A boutique hotel website for a mountain retreat in Nepal, with rooms and cottages, a Nepali menu, gallery and online booking requests.",
     "cover": "/assets/images/project-paradise-cover.webp",
@@ -498,7 +498,7 @@ export const PROJECTS = [
   },
   {
     "slug": "green-architect-interior-studio",
-    "title": "Green Architect & Interior – Design Studio Website",
+    "title": "Green Architect & Interior – Architecture & Interior Studio Website",
     "chip": "Architecture",
     "lead": "A lead-generating website for a Dhaka architecture and interior studio, with services, a project portfolio and a free-quote form.",
     "cover": "/assets/images/project-greenarch-cover.webp",
@@ -552,7 +552,7 @@ export const PROJECTS = [
   },
   {
     "slug": "nizams-restaurant-kolkata",
-    "title": "Nizam's Restaurant – Heritage Kolkata Restaurant Website",
+    "title": "Nizam's Restaurant – Heritage Restaurant Website & Table Booking",
     "chip": "Restaurant",
     "lead": "A heritage restaurant website for the inventor of the Kathi Roll, with a full Mughlai menu, specials, gallery and WhatsApp table booking.",
     "cover": "/assets/images/project-nizams-cover.webp",
@@ -607,7 +607,7 @@ export const PROJECTS = [
   },
   {
     "slug": "lotus-sweets-and-bakery",
-    "title": "Lotus Sweets & Bakery – Cake & Sweets Storefront",
+    "title": "Lotus Sweets & Bakery – Cake & Sweets Online Store",
     "chip": "Bakery",
     "lead": "A playful bakery storefront with a cake and sweets catalogue, custom cake requests and WhatsApp ordering.",
     "cover": "/assets/images/project-lotus-cover.webp",
@@ -661,23 +661,30 @@ export const PROJECTS = [
     "heroPos": "0% 50%"
   },
   {
-    "slug": "comptajz-accounting-invoicing-dashboard",
-    "title": "Compta JZ – Smart Accounting & Invoicing Dashboard",
-    "chip": "FinTech",
-    "lead": "A French accounting SaaS for freelancers and small businesses: invoices, quotes, payments, reminders and financial reports in one dashboard.",
-    "cover": "/assets/images/project-comptajz-cover.webp",
-    "heroPos": "0% 50%",
+    "slug": "topproczar-business-management-suite",
+    "title": "Topproczar – All-in-One Business Management Suite",
+    "chip": "SaaS",
+    "lead": "A modular business platform for accounting, CRM, HRM, POS and projects, with a marketing site, add-on pricing and checkout, and a powerful admin dashboard to run it all.",
+    "cover": "/assets/images/project-topproczar-cover.webp",
     "galleryImgs": [
-      "/assets/images/project-comptajz-1.webp",
-      "/assets/images/project-comptajz-2.webp",
-      "/assets/images/project-comptajz-3.webp",
-      "/assets/images/project-comptajz-4.webp",
-      "/assets/images/project-comptajz-5.webp",
-      "/assets/images/project-comptajz-6.webp"
+      "/assets/images/project-topproczar-1.webp",
+      "/assets/images/project-topproczar-2.webp",
+      "/assets/images/project-topproczar-3.webp",
+      "/assets/images/project-topproczar-4.webp",
+      "/assets/images/project-topproczar-5.webp",
+      "/assets/images/project-topproczar-6.webp",
+      "/assets/images/project-topproczar-7.webp",
+      "/assets/images/project-topproczar-8.webp",
+      "/assets/images/project-topproczar-9.webp",
+      "/assets/images/project-topproczar-10.webp",
+      "/assets/images/project-topproczar-11.webp",
+      "/assets/images/project-topproczar-12.webp",
+      "/assets/images/project-topproczar-13.webp",
+      "/assets/images/project-topproczar-14.webp"
     ],
     "when": [
-      "Start: April 2026",
-      "End: April 2026"
+      "Start: October 2024",
+      "End: August 2025"
     ],
     "status": "Completed",
     "authorOverride": [
@@ -686,38 +693,98 @@ export const PROJECTS = [
       "/assets/icons/logo-mark.svg"
     ],
     "body": [
-      "Compta JZ is a French-language accounting platform for freelancers, independents and small companies. Its promise is simple: manage invoices, payments, suppliers, clients and financial dashboards in one secure, easy-to-use space, so owners spend less time on paperwork and always know where their numbers stand. We built the front end from the project's Figma designs: the marketing site and the complete user dashboard.",
-      "The marketing site introduces the product with a clear hero, a \"Pour qui est Compta JZ ?\" section for each type of user, a four-step onboarding story (\"Votre comptabilité en 4 étapes\") and a pricing page with Basic and Pro plans, monthly or yearly billing. FAQ, contact, sign-up and login pages complete the public side, all in a soft glass-and-gradient visual style.",
-      "Inside, the dashboard (\"Tableau de bord\") opens with a financial overview — revenue, unpaid receivables and total debts — next to top clients, a revenue chart comparing sales and expenses, upcoming reminders and the latest invoices. Users create invoices, quotes and credit notes (facture, devis and avoir) from guided forms with VAT details, payment terms and due dates, preview them before sending, and manage clients and suppliers with searchable, filterable tables.",
-      "Money tracking is built in. The Paiements page totals income, expenses and net balance and lists every transaction with its status. Rappels groups overdue, upcoming and partially paid invoices and lets users send a reminder in one click. The Compte de résultat page produces an income statement for a chosen company, fiscal year and period, with sales, costs, result and margins, and exports it to PDF. Pro users also get a monthly summary with accounting exports in CSV and FEC formats for their accountant.",
-      "The front end is built with Next.js 16 and React 19 in TypeScript, styled with Tailwind CSS and shadcn/ui on Radix UI primitives. Chart.js powers the dashboards, React Hook Form handles every form, React PDF, jsPDF and html2canvas generate documents, PapaParse handles CSV exports and GSAP adds motion to the marketing pages. It talks to the backend through an Axios service layer with cookie-based sessions, and ships with a Dockerfile and Docker Compose setup for deployment."
+      "Topproczar is an all-in-one business platform that lets companies \"take care of each need of their business functions in one place\". Accounting, HRM, CRM, POS, project management and payments are each available as an add-on module. We built both sides of the product: the public marketing website that sells and bills the packages, and the multi-workspace business dashboard where customers actually run their company. The identity is a fresh, confident green with plenty of white space, rounded cards and clear hierarchy.",
+      "The website opens with a limited-time offer bar and a bold green hero that shows the product in a device frame, with Get the Package and Topproczar calls to action. Value cards highlight free and open-source foundations, growth and 24/7 support. A \"Why choose dedicated modules for your business?\" timeline walks through each module (accounting and billing, HRM, CRM, projects, customers and vendors), pairing real dashboard screens with short benefit-led copy. Further down, \"Built with Technology You Can Trust\" explains the Laravel foundation, alongside testimonials and a dedicated eCommerce fashion-theme package.",
+      "Every add-on has its own detail page, such as Accounting at $50/month or $500/year, with a hero, feature walkthroughs (accounting and billing, inventory, proposal-to-payment and reports) and cross-links to the other modules. The Simple Pricing page lets buyers start from a Basic Package and toggle add-ons like Accounting, HRM, CRM, POS, Stripe and Project. They can set the number of workspaces and users, switch between monthly and yearly billing, see the total update live, and check out through a payment-details step. Login, registration, email confirmation, About, Terms and Privacy pages complete the site.",
+      "The dashboard brings a consistent layout, a collapsible sidebar, workspace switching and a language selector to every module. The Accounting dashboard summarises customers, vendors, invoices and bills, with account balances, cashflow, income-versus-expense trends and category breakdowns. The CRM dashboard tracks recently created and modified deals, deal calls by day and deals by stage, with dedicated screens for leads, pipelines, deal management and CSV imports.",
+      "Behind these sit complete back-office flows. Invoices, proposals and bills have setup screens for categories, units and tax rates. There are purchases and warehouses with stock transfers, banking accounts, a chart of accounts and transfers, plus revenue, credit notes, payments and debit notes. Customer and vendor profiles have tabs for invoices, proposals, projects and statements. Reports cover profit and loss, income vs expense, tax, transactions and account statements. User management includes roles with granular, colour-coded permissions and activity logs, turning a dense ERP into something teams can learn quickly.",
+      "Topproczar runs on Laravel as a modular platform: each add-on (Accounting, HRM, CRM, POS, Stripe and Project) can be switched on per workspace and billed monthly or yearly. Multi-workspace tenancy keeps every company's data isolated, role-based permissions control each action, and CSV import and export make it easy to migrate existing records. Stripe handles subscriptions and checkout, financial reports are generated on demand, and the whole suite is multilingual, giving growing businesses one secure system instead of a stack of disconnected tools."
     ],
     "faq": [
       [
-        "What is Compta JZ?",
-        "Compta JZ is an online accounting and invoicing platform in French for freelancers and small businesses. It brings invoices, quotes, payments, reminders, clients, suppliers and financial reports together in one dashboard."
+        "What is Topproczar?",
+        "A modular business platform where companies pick the add-ons they need (Accounting, HRM, CRM, POS, Stripe payments and Project management) and run them all from one secure, multi-workspace dashboard."
       ],
       [
-        "Which documents can users create?",
-        "Invoices, quotes and credit notes. Each one is built from a guided form with client details, VAT information, payment method, payment terms and due date, and can be previewed before it is sent."
+        "What does Topproczar include?",
+        "A marketing website (home, add-on details, pricing, checkout, auth and legal pages) and a full admin dashboard covering accounting, CRM, invoices, purchases, banking, reports and user management."
       ],
       [
-        "How does it help with unpaid invoices?",
-        "The Rappels page groups invoices that are overdue, due soon or partially paid, and users can send a payment reminder to the client in one click. The dashboard also shows the total of unpaid receivables at a glance."
+        "How does the pricing page work?",
+        "Buyers start with the Basic Package, toggle the add-ons they want, choose the number of workspaces and users, and switch between monthly and yearly billing, with the total updating live before checkout."
       ],
       [
-        "Can users export their accounts?",
-        "Yes. The income statement exports to PDF, and on the Pro plan the monthly summary exports accounting data in CSV and FEC formats, ready to share with an accountant."
+        "How easy is the dashboard to use?",
+        "Every module shares one layout, sidebar and component set. Each dashboard opens with clear summary cards and charts, and dense accounting flows are organised into simple list, create and detail screens."
       ],
       [
-        "Which technologies power it?",
-        "Next.js 16, React 19 and TypeScript with Tailwind CSS, shadcn/ui and Radix UI, Chart.js for charts, React Hook Form for forms, React PDF, jsPDF and html2canvas for documents, PapaParse for CSV, GSAP for animation, and Docker for deployment."
+        "How are permissions handled?",
+        "Admins create roles such as client, staff or HR and assign granular permissions for each module from colour-coded permission chips. User activity logs give full visibility."
+      ]
+    ]
+  },
+  {
+    "slug": "napotech-expert-services-marketplace",
+    "title": "Napotech – Expert Services Marketplace App & Admin Console",
+    "chip": "Mobile App",
+    "lead": "A two-sided marketplace app where clients hire verified experts for home services, repairs, tutoring and remote work, with quotes, negotiation, milestone payments held until work is done, and a full admin console.",
+    "cover": "/assets/images/project-napotech-cover.webp",
+    "galleryImgs": [
+      "/assets/images/project-napotech-1.webp",
+      "/assets/images/project-napotech-2.webp",
+      "/assets/images/project-napotech-3.webp",
+      "/assets/images/project-napotech-4.webp",
+      "/assets/images/project-napotech-5.webp",
+      "/assets/images/project-napotech-6.webp",
+      "/assets/images/project-napotech-7.webp",
+      "/assets/images/project-napotech-8.webp",
+      "/assets/images/project-napotech-9.webp",
+      "/assets/images/project-napotech-10.webp"
+    ],
+    "when": [
+      "Start: September 2026",
+      "End: October 2026"
+    ],
+    "status": "Completed",
+    "authorOverride": [
+      "StackVenger Team",
+      "Design & Engineering",
+      "/assets/icons/logo-mark.svg"
+    ],
+    "body": [
+      "Napotech (\"Refine your skills\") is a two-sided services marketplace that connects people who need something done with verified professionals who can do it, from electricians and cleaners to maths tutors and remote developers. We engineered the complete platform: iOS and Android apps for clients and experts, a web admin console for the operations team, and the backend that powers bookings, payments, messaging and verification across all of them. A confident navy-and-amber interface, friendly illustrations and clear card-based screens make hiring feel safe and simple.",
+      "The journey starts with three onboarding screens: Connect Skills with Opportunities, Work Together with Confidence, and Manage Everything in One Place. Users then choose their role (Client or Expert) and their language (English or Kiswahili), and verify by phone. Clients land on a home screen with a \"Trusted Experts Near You\" banner, category shortcuts (Home Services, Repair & Diagnostic, Education & Tutoring and more), upcoming appointments, and nearby and recommended experts. They can browse in list, grid or map view, with search, filters and sorting. Expert profiles show ratings, experience, jobs completed, starting price, portfolio and reviews.",
+      "Hiring is a guided four-step request: describe the job with photos and item details, set the service location on a map, pick a date, time and estimated duration, then review and send. Experts reply with a quote. Clients can accept it, chat about it or send a counter offer, and every change is tracked in a quote timeline. At checkout the client chooses a single payment or milestone payments, and funds are held until the work is confirmed. Jobs then move through Scheduled, In Progress and Completed, with rescheduling, cancellation, dispute reporting and reviews built in.",
+      "Experts get their own workspace: an availability toggle with an emergency mode, new job requests, a monthly earnings summary, and a wallet with withdrawals and transaction history. Analytics cover profile views, quotation stats and monthly earnings, and experts manage their portfolio, services, service area and working hours. Before taking jobs, every expert completes a multi-step profile setup and identity verification. Free and Premium plans unlock better visibility and lower commission, and a referral programme rewards bringing friends on board.",
+      "The admin console gives operators full control. The dashboard shows revenue, active jobs and experts, open disputes, pending verifications and payouts, with monthly earnings and top-category charts. Admins step through expert verification (profile, documents and a face check) and approve, reject or request resubmission. Dispute tools let them review evidence and chat history, then release funds to the expert, refund the client, or approve a partial payment. There are also job and client management, transactions with editable commission, payouts, subscriptions, a support-ticket inbox, review moderation, content management (banners, announcements, FAQs, static pages) and role-based permissions for admins and super admins.",
+      "Under the hood, the mobile apps and the admin console share one secure REST API. Real-time chat and push notifications keep clients and experts in sync on quotes, counter offers and job updates, while location services power map search and service-area matching. Payments run through an integrated gateway with escrow-style holds, milestone releases, partial refunds and expert payouts, and every money movement is recorded in a transaction ledger with configurable platform commission. Identity verification with face matching, role-based admin permissions, full dispute records and English/Kiswahili localisation make the platform ready for real-world scale."
+    ],
+    "faq": [
+      [
+        "Who is Napotech for?",
+        "Clients who need trusted help (home services, repairs, installations, care, tutoring or remote development) and independent experts who want a steady stream of verified jobs and secure payouts."
+      ],
+      [
+        "How are experts vetted?",
+        "Each expert completes a multi-step profile and submits identity documents with a selfie. The admin team reviews the profile, documents and face match before approving, rejecting or requesting resubmission."
+      ],
+      [
+        "How does pricing work?",
+        "Clients send a job request, the expert replies with a quote, and both sides can negotiate with counter offers in chat. Once accepted, the client pays in one go or in milestones, and funds are released when the work is confirmed."
+      ],
+      [
+        "What happens if something goes wrong?",
+        "Clients can report an issue or raise a dispute. Admins review the evidence and the conversation, then refund, release funds to the expert, or approve a partial payment."
+      ],
+      [
+        "Which platforms does Napotech run on?",
+        "Clients and experts use the iOS and Android apps, and the operations team uses a web admin console. All three run on one shared backend, in English and Kiswahili."
       ]
     ]
   },
   {
     "slug": "atliss-food-truck-mobile-app",
-    "title": "ATLISS – Food Truck Discovery & Vendor Mobile App",
+    "title": "ATLISS – Food Truck Marketplace App & Admin Dashboard",
     "chip": "Mobile App",
     "lead": "A two-sided Flutter app where customers find nearby food trucks and order ahead, while vendors go live, manage menus and orders, and grow with insights, plus a web admin dashboard to run the platform.",
     "cover": "/assets/images/project-atliss-cover.webp",
@@ -742,11 +809,11 @@ export const PROJECTS = [
       "/assets/icons/logo-mark.svg"
     ],
     "body": [
-      "ATLISS (\"Where Food Trucks Live!\") is a cross-platform mobile app that connects people with the street food around them. One app serves two audiences. Customers discover food trucks near them, browse live menus and order ahead for pickup. Vendors run their truck from their phone: they go live with one tap, take orders and see how their business is performing. We built the Flutter app for iOS and Android from the project's Figma designs, plus a companion web dashboard (StreetFair) that the operations team uses to manage the whole platform.",
+      "ATLISS (\"Where Food Trucks Live!\") is a cross-platform mobile app that connects people with the street food around them. One app serves two audiences. Customers discover food trucks near them, browse live menus and order ahead for pickup. Vendors run their truck from their phone: they go live with one tap, take orders and see how their business is performing. We designed and built the Flutter app for iOS and Android, plus a companion web dashboard (StreetFair) that the operations team uses to manage the whole platform.",
       "The customer side opens on a personalised home screen: \"What are you craving for today?\". It has cuisine categories, a \"What's near me\" carousel, recommendations and search across both food and trucks. Each truck has a profile with its menu, info, opening hours, gallery and reviews, and one tap gives map directions. Dishes support size variations and add-ons. The cart groups items by truck, an order timeline tracks the order from confirmed to ready for pickup, and customers can rate their meal and leave tagged reviews. Favourites, notifications and an English/Spanish language switch complete the experience.",
       "For vendors, the home screen is a live control panel. A Go Live toggle shows the truck's location, and today's sales and order counts sit next to the incoming orders. Vendors manage menu categories and items with photos, availability switches, prep times and add-ons, then move orders through Pending, Active and History. Before selling, every vendor completes in-app verification: they upload business documents, take a photo of a government ID and a selfie, and ML Kit text and face detection check them on the device before submission.",
       "The Insights area is where vendors grow. Charts show revenue, peak hours, sales by location and best-selling areas, while an AI Guidance tab and an Events tab surface opportunities like nearby festivals and high-traffic spots. These features are tiered by subscription: Starter, Pro and Elite plans are sold through RevenueCat, which works with App Store and Google Play billing. Under the hood the app uses Riverpod for state, Dio for the REST API, Socket.IO for real-time notifications, Firebase Authentication with Google and Apple sign-in, Firebase Cloud Messaging for push, and Google Maps with geolocation.",
-      "The StreetFair admin dashboard is built with Next.js 16, React 19, Tailwind CSS 4 and shadcn/Radix UI. It gives the team a single view of the platform: vendor, customer and active-truck totals, platform revenue and vendor-status charts, growth analytics and leaderboards, vendor verification and account management, customer management, and subscription plans. Data flows through TanStack Query and Zustand, charts use Recharts, maps use Leaflet, and forms are validated with React Hook Form and Zod. Together, the app and the dashboard make up a complete food-truck marketplace that is ready to launch."
+      "The StreetFair admin dashboard is built with Next.js 16, React 19, Tailwind CSS 4 and shadcn/Radix UI. It gives the team a single view of the platform: vendor, customer and active-truck totals, platform revenue and vendor-status charts, growth analytics and leaderboards, vendor verification and account management, customer management, and subscription plans. Data flows through TanStack Query and Zustand, charts use Recharts, maps use Leaflet, and forms are validated with React Hook Form and Zod. Together, the app and the dashboard make up a complete, working food-truck marketplace."
     ],
     "faq": [
       [
@@ -772,63 +839,8 @@ export const PROJECTS = [
     ]
   },
   {
-    "slug": "stability-payday-personal-finance-app",
-    "title": "Stability – Payday-Based Personal Finance App",
-    "chip": "Mobile App",
-    "lead": "A calm, payday-based budgeting app for iOS and Android built around one number, Safe to Spend, with bills, debts, savings goals and income in one warm, simple experience.",
-    "cover": "/assets/images/project-stability-cover.webp",
-    "heroPos": "0% 50%",
-    "galleryImgs": [
-      "/assets/images/project-stability-1.webp",
-      "/assets/images/project-stability-2.webp",
-      "/assets/images/project-stability-3.webp",
-      "/assets/images/project-stability-4.webp",
-      "/assets/images/project-stability-5.webp",
-      "/assets/images/project-stability-6.webp"
-    ],
-    "when": [
-      "Start: September 2026",
-      "End: October 2026"
-    ],
-    "status": "Completed",
-    "authorOverride": [
-      "StackVenger Team",
-      "Design & Engineering",
-      "/assets/icons/logo-mark.svg"
-    ],
-    "body": [
-      "Stability is a personal finance app for people who don't want to live inside a spreadsheet. Instead of dozens of charts and categories, it answers one question every payday: how much is actually safe to spend? We built the app in Flutter for iOS and Android from the project's designs. It has a warm cream-and-brown palette, Lora serif typography and gentle staggered animations that make money feel less stressful.",
-      "Onboarding is a guided, two-minute setup that asks one question at a time. How does your income come in: the same every paycheck, varying a little, or varying a lot from gig work, tips or commissions? How often are you paid, and roughly how much? From there it asks about rent or mortgage, a car payment, other regular bills, any debts and anything you're saving for. Each amount can be entered monthly or matched to your pay frequency, and the flow ends with a personal Stability profile that shows your Safe to Spend straight away.",
-      "The home screen puts that number front and centre with a soft glow and a greeting for the time of day. Below it, a Payday Breakdown shows exactly where the paycheck goes: the amount going to bills, the number of bills, and what's left. Behind the scenes, Safe to Spend is calculated from your monthly income minus bills and savings. Weekly, fortnightly and twice-monthly pay are all normalised to the same scale, so the figure stays accurate whatever your pay schedule.",
-      "Five tabs cover the rest of a person's money. Pay manages income sources and commitments. Bills lists every recurring bill with its amount and due day. Balances tracks debts like student loans and credit cards. Goals holds savings targets such as an emergency fund or holiday gifts, along with their contributions. Everything can be added, edited and deleted through clean bottom sheets. Accounts support email sign-up with OTP verification, password reset by code, and Google and Apple sign-in through Firebase Authentication. Settings covers profile editing with photo upload, notification preferences, terms, privacy and account deletion.",
-      "Under the hood, Stability uses Riverpod for state management, Dio for the REST API, SharedPreferences for the session and connectivity checks for offline handling. Premium access runs through RevenueCat, which handles a \"Choose your plan\" paywall, purchases and restores across the App Store and Google Play. The result is a finished, store-ready app that turns budgeting into one clear number people can trust."
-    ],
-    "faq": [
-      [
-        "What is \"Safe to Spend\"?",
-        "It's the money left from your paycheck after bills, debt payments and savings goals are covered. Stability recalculates it whenever your income, bills or goals change, so you always know what you can spend freely."
-      ],
-      [
-        "Does it work with irregular income?",
-        "Yes. During setup, users choose whether their income is steady, varies a little or varies a lot, and how often they're paid: weekly, every two weeks, twice a month or monthly. The app normalises everything so the number stays realistic."
-      ],
-      [
-        "Which platforms does Stability support?",
-        "It's a single Flutter codebase that ships to both iOS and Android, with layouts scaled from a 375×812 design for consistent spacing on every device."
-      ],
-      [
-        "How do users sign in?",
-        "With email and password (verified by a one-time code), or with Google or Apple sign-in through Firebase Authentication. Forgotten passwords are reset with an emailed OTP."
-      ],
-      [
-        "How are premium features sold?",
-        "Through RevenueCat. Users see a \"Choose your plan\" screen, purchase with native App Store or Google Play billing, and can restore their purchase on a new device."
-      ]
-    ]
-  },
-  {
     "slug": "limtlss-endurance-challenge-app",
-    "title": "LIMTLSS – Endurance Challenge & Sponsorship App",
+    "title": "LIMTLSS – Endurance Challenge & Athlete Sponsorship App",
     "chip": "Mobile App",
     "lead": "A dark, high-energy Flutter app for endurance athletes: elite, monthly, virtual and community challenges, Strava-synced progress, athlete sponsorships and real-life support, run from a full admin dashboard.",
     "cover": "/assets/images/project-limtlss-cover.webp",
@@ -855,7 +867,7 @@ export const PROJECTS = [
       "/assets/icons/logo-mark.svg"
     ],
     "body": [
-      "LIMTLSS is a mobile platform for people who want to push past their limits: ultra runners, long-distance cyclists, open-water swimmers and anyone chasing their next big feat of endurance. Its promise is right on the home screen: \"Where ordinary ends and extraordinary begins.\" We built the iOS and Android app in Flutter from the project's designs. It has a bold black-and-yellow interface, Oswald display type and screens tuned for quick, focused use before and after a session.",
+      "LIMTLSS is a mobile platform for people who want to push past their limits: ultra runners, long-distance cyclists, open-water swimmers and anyone chasing their next big feat of endurance. Its promise is right on the home screen: \"Where ordinary ends and extraordinary begins.\" We designed and built the iOS and Android app in Flutter. It has a bold black-and-yellow interface, Oswald display type and screens tuned for quick, focused use before and after a session.",
       "Everything is organised around \"Four Paths to Greatness\". Elite Challenges are legendary and mythic feats for athletes ready for the extreme. Monthly Challenges set one main event plus generic benchmarks each month, like The Vertical 1000 or a 5K elevation run. Virtual Adventures let users complete historic routes like the Kokoda Trail from anywhere, with distance, elevation, checkpoints and the story behind the trail. Community Challenges are designed by the athletes themselves. Every challenge can be started, paused, resumed or left, and comes with a checkpoints log, a leaderboard and a group chat.",
       "With Design Your Challenge, any user can propose a new challenge. They pick a category (running, cycling, swimming, HIIT or other), then fill in the title, description, activity type, difficulty, distance and time limit. A timeline of checkpoints is added step by step with a live preview, and the challenge is then sent for admin approval before it goes live in the Community Hub. Real-Life Support adds nutrition plans, route planning, training plans with pacing charts and transport logistics, with a Request a Quote form for bespoke support packages.",
       "The Sponsorship Hub turns ambition into funding. Athletes create a sponsorship challenge with a funding goal and the gear they need, such as footwear, nutrition, transport or supplements. Brands browse open listings, see progress towards the goal and contact the athlete directly. Activity tracking connects to Strava through OAuth, with auto-sync and Wi-Fi-only options, and there are connection cards for Garmin and Apple Health. Profiles show challenges attempted, completed and incomplete, along with active sponsorships, history and notification preferences.",
@@ -885,68 +897,10 @@ export const PROJECTS = [
     ]
   },
   {
-    "slug": "napotech-expert-services-marketplace",
-    "title": "Napotech – Expert Services Marketplace App & Admin Console",
-    "chip": "Mobile App",
-    "lead": "A two-sided marketplace where clients hire verified experts for home services, repairs, tutoring and remote work, with quotes, negotiation, escrow-style milestone payments and a full admin console.",
-    "cover": "/assets/images/project-napotech-cover.webp",
-    "galleryImgs": [
-      "/assets/images/project-napotech-1.webp",
-      "/assets/images/project-napotech-2.webp",
-      "/assets/images/project-napotech-3.webp",
-      "/assets/images/project-napotech-4.webp",
-      "/assets/images/project-napotech-5.webp",
-      "/assets/images/project-napotech-6.webp",
-      "/assets/images/project-napotech-7.webp",
-      "/assets/images/project-napotech-8.webp",
-      "/assets/images/project-napotech-9.webp",
-      "/assets/images/project-napotech-10.webp"
-    ],
-    "when": [
-      "Start: September 2026",
-      "End: October 2026"
-    ],
-    "status": "Design Completed",
-    "authorOverride": [
-      "StackVenger Team",
-      "Product Design",
-      "/assets/icons/logo-mark.svg"
-    ],
-    "body": [
-      "Napotech (\"Refine your skills\") connects people who need something done with verified professionals who can do it, from electricians and cleaners to maths tutors and remote developers. We designed the complete product: a mobile app for clients and experts, and a web admin console for the team that runs the marketplace. The design uses a confident navy-and-amber palette, friendly illustrations and clear, card-based layouts that make hiring feel safe and simple.",
-      "The journey starts with three onboarding screens: Connect Skills with Opportunities, Work Together with Confidence, and Manage Everything in One Place. Users then choose their role (Client or Expert) and their language (English or Kiswahili), and verify by phone. Clients land on a home screen with a \"Trusted Experts Near You\" banner, category shortcuts (Home Services, Repair & Diagnostic, Education & Tutoring and more), upcoming appointments, and nearby and recommended experts. They can browse in list, grid or map view, with search, filters and sorting. Expert profiles show ratings, experience, jobs completed, starting price, portfolio and reviews.",
-      "Hiring is a guided four-step request: describe the job with photos and item details, set the service location on a map, pick a date, time and estimated duration, then review and send. Experts reply with a quote. Clients can accept it, chat about it or send a counter offer, and every change is tracked in a quote timeline. At checkout the client chooses a single payment or milestone payments, and funds are held until the work is confirmed. Jobs then move through Scheduled, In Progress and Completed, with rescheduling, cancellation, dispute reporting and reviews built in.",
-      "Experts get their own workspace: an availability toggle with an emergency mode, new job requests, a monthly earnings summary, and a wallet with withdrawals and transaction history. Analytics cover profile views, quotation stats and monthly earnings, and experts manage their portfolio, services, service area and working hours. Before taking jobs, every expert completes a multi-step profile setup and identity verification. Free and Premium plans unlock better visibility and lower commission, and a referral programme rewards bringing friends on board.",
-      "The admin console gives operators full control. The dashboard shows revenue, active jobs and experts, open disputes, pending verifications and payouts, with monthly earnings and top-category charts. Admins step through expert verification (profile, documents and a face check) and approve, reject or request resubmission. Dispute tools let them review evidence and chat history, then release funds to the expert, refund the client, or approve a partial payment. There are also job and client management, transactions with editable commission, payouts, subscriptions, a support-ticket inbox, review moderation, content management (banners, announcements, FAQs, static pages) and role-based permissions for admins and super admins."
-    ],
-    "faq": [
-      [
-        "Who is Napotech for?",
-        "Clients who need trusted help (home services, repairs, installations, care, tutoring or remote development) and independent experts who want a steady stream of verified jobs and secure payouts."
-      ],
-      [
-        "How are experts vetted?",
-        "Each expert completes a multi-step profile and submits identity documents with a selfie. The admin team reviews the profile, documents and face match before approving, rejecting or requesting resubmission."
-      ],
-      [
-        "How does pricing work?",
-        "Clients send a job request, the expert replies with a quote, and both sides can negotiate with counter offers in chat. Once accepted, the client pays in one go or in milestones, and funds are released when the work is confirmed."
-      ],
-      [
-        "What happens if something goes wrong?",
-        "Clients can report an issue or raise a dispute. Admins review the evidence and the conversation, then refund, release funds to the expert, or approve a partial payment."
-      ],
-      [
-        "Which languages does the app support?",
-        "The designs include English and Kiswahili, chosen during onboarding and changeable at any time in preferences."
-      ]
-    ]
-  },
-  {
     "slug": "coachme-sports-coaching-app",
-    "title": "CoachMe – Sports Coaching & Booking App with Admin Panel",
+    "title": "CoachMe – Sports Coaching & Session Booking App",
     "chip": "Mobile App",
-    "lead": "A dark, athletic mobile app where athletes find certified coaches, book and pay for sessions, chat, and track goals and badges, while coaches manage their schedule and earnings, plus a full admin panel.",
+    "lead": "A sports coaching app where athletes find certified coaches, book and pay for sessions, chat, and track goals and badges, while coaches manage their schedule and earnings, all run from a full admin panel.",
     "cover": "/assets/images/project-coachme-cover.webp",
     "galleryImgs": [
       "/assets/images/project-coachme-1.webp",
@@ -965,18 +919,19 @@ export const PROJECTS = [
       "Start: September 2026",
       "End: October 2026"
     ],
-    "status": "Design Completed",
+    "status": "Completed",
     "authorOverride": [
       "StackVenger Team",
-      "Product Design",
+      "Design & Engineering",
       "/assets/icons/logo-mark.svg"
     ],
     "body": [
-      "CoachMe (\"Find your coach, achieve your goals\") is a coaching platform that brings athletes and certified coaches together in one app. We designed the complete product: the mobile experience for both athletes and coaches, and a web admin panel for running the platform. The visual language is dark and athletic, with full-bleed sports photography, electric-blue accents and bold headlines like \"Find Your Expert Coach\", \"Book, Train, Succeed\" and \"Start Your Journey\" that set the tone from the first screen.",
+      "CoachMe (\"Find your coach, achieve your goals\") is a coaching platform that brings athletes and certified coaches together in one app. We engineered the complete platform: iOS and Android apps for athletes and coaches, a web admin panel for the operations team, and the backend that handles bookings, payments, messaging and progress tracking. The visual language is dark and athletic, with full-bleed sports photography, electric-blue accents and bold headlines like \"Find Your Expert Coach\", \"Book, Train, Succeed\" and \"Start Your Journey\" that set the tone from the first screen.",
       "After onboarding, users choose a role (find a coach, or coach athletes) and sign up with email, Apple, Google or Facebook, with OTP verification and a GDPR consent step. Athletes pick the sports they like (swimming, bodybuilding, yoga, boxing, running, tennis and more) and their goals, such as weight loss, muscle gain, flexibility, endurance, competition prep or injury recovery. Coaches build a professional profile with specialties, experience, certifications, objectives and session pricing.",
       "The athlete home shows the next session, workout campaigns and badge progress. Search finds coaches by sport, and each coach profile shows ratings, certifications, location, available days and specialties. Booking is a calendar flow: pick a date, review the session overview, and pay securely by card through Stripe. Each booking has its own detail page with session progress and stats, and a validation code that the athlete shares with the coach to confirm the session took place. After the session, athletes leave a tagged review.",
       "Between sessions, athletes chat with their coach, including shared exercise videos and custom offers the coach can send right in the conversation. Goals & Progress tracks weight, sets, duration and calories against targets, with coach notes, and gamified badges like First Session, Goal Setter, Consistency Master and Marathon Trainer reward consistency. A built-in marketplace sells gym gear and supplements. Premium members ($49/month) unlock video programmes, on-demand tips, mini lessons and the full badge system. Coaches get their own dashboard with earnings, session counts, ratings and charts, plus an athlete list, a booking calendar, session packages, video uploads, blocked time slots and private athlete notes.",
-      "The admin panel lets operators switch between athlete, coach and admin views and manage everything in one place. It covers a dashboard with revenue trends, user distribution and recent activity, plus user and booking management with bulk notifications. Admins can approve coach profiles, session validations and content, manage marketplace products and stock, create subscription plans and their benefits, design gamification badges, and export analytics reports. Platform settings cover commission rates, daily session limits and maintenance mode."
+      "The admin panel lets operators switch between athlete, coach and admin views and manage everything in one place. It covers a dashboard with revenue trends, user distribution and recent activity, plus user and booking management with bulk notifications. Admins can approve coach profiles, session validations and content, manage marketplace products and stock, create subscription plans and their benefits, design gamification badges, and export analytics reports. Platform settings cover commission rates, daily session limits and maintenance mode.",
+      "The apps and the admin panel run on a secure shared API. Card payments go through Stripe with automatic digital invoices. Apple, Google and Facebook sign-in plus one-time passcodes secure every account, and consent and data handling follow GDPR. Real-time chat delivers messages, exercise videos and custom offers instantly. Push notifications cover bookings, sessions, progress and promotions, and coach video uploads stream from cloud storage. Subscription billing, session validation codes and role switching between athlete, coach and admin views complete a production-ready system."
     ],
     "faq": [
       [
@@ -1002,10 +957,120 @@ export const PROJECTS = [
     ]
   },
   {
+    "slug": "comptajz-accounting-invoicing-dashboard",
+    "title": "Compta JZ – Accounting & Invoicing SaaS Platform",
+    "chip": "FinTech",
+    "lead": "A French accounting SaaS for freelancers and small businesses: invoices, quotes, payments, reminders and financial reports in one dashboard.",
+    "cover": "/assets/images/project-comptajz-cover.webp",
+    "heroPos": "0% 50%",
+    "galleryImgs": [
+      "/assets/images/project-comptajz-1.webp",
+      "/assets/images/project-comptajz-2.webp",
+      "/assets/images/project-comptajz-3.webp",
+      "/assets/images/project-comptajz-4.webp",
+      "/assets/images/project-comptajz-5.webp",
+      "/assets/images/project-comptajz-6.webp"
+    ],
+    "when": [
+      "Start: April 2026",
+      "End: April 2026"
+    ],
+    "status": "Completed",
+    "authorOverride": [
+      "StackVenger Team",
+      "Design & Engineering",
+      "/assets/icons/logo-mark.svg"
+    ],
+    "body": [
+      "Compta JZ is a French-language accounting platform for freelancers, independents and small companies. Its promise is simple: manage invoices, payments, suppliers, clients and financial dashboards in one secure, easy-to-use space, so owners spend less time on paperwork and always know where their numbers stand. We designed and built the complete platform: the marketing site, the user dashboard and the services behind them.",
+      "The marketing site introduces the product with a clear hero, a \"Pour qui est Compta JZ ?\" section for each type of user, a four-step onboarding story (\"Votre comptabilité en 4 étapes\") and a pricing page with Basic and Pro plans, monthly or yearly billing. FAQ, contact, sign-up and login pages complete the public side, all in a soft glass-and-gradient visual style.",
+      "Inside, the dashboard (\"Tableau de bord\") opens with a financial overview — revenue, unpaid receivables and total debts — next to top clients, a revenue chart comparing sales and expenses, upcoming reminders and the latest invoices. Users create invoices, quotes and credit notes (facture, devis and avoir) from guided forms with VAT details, payment terms and due dates, preview them before sending, and manage clients and suppliers with searchable, filterable tables.",
+      "Money tracking is built in. The Paiements page totals income, expenses and net balance and lists every transaction with its status. Rappels groups overdue, upcoming and partially paid invoices and lets users send a reminder in one click. The Compte de résultat page produces an income statement for a chosen company, fiscal year and period, with sales, costs, result and margins, and exports it to PDF. Pro users also get a monthly summary with accounting exports in CSV and FEC formats for their accountant.",
+      "The platform is built with Next.js 16 and React 19 in TypeScript, styled with Tailwind CSS and shadcn/ui on Radix UI primitives. Chart.js powers the dashboards, React Hook Form handles every form, React PDF, jsPDF and html2canvas generate documents, PapaParse handles CSV exports and GSAP adds motion to the marketing pages. It talks to the backend through an Axios service layer with cookie-based sessions, and ships with a Dockerfile and Docker Compose setup for deployment."
+    ],
+    "faq": [
+      [
+        "What is Compta JZ?",
+        "Compta JZ is an online accounting and invoicing platform in French for freelancers and small businesses. It brings invoices, quotes, payments, reminders, clients, suppliers and financial reports together in one dashboard."
+      ],
+      [
+        "Which documents can users create?",
+        "Invoices, quotes and credit notes. Each one is built from a guided form with client details, VAT information, payment method, payment terms and due date, and can be previewed before it is sent."
+      ],
+      [
+        "How does it help with unpaid invoices?",
+        "The Rappels page groups invoices that are overdue, due soon or partially paid, and users can send a payment reminder to the client in one click. The dashboard also shows the total of unpaid receivables at a glance."
+      ],
+      [
+        "Can users export their accounts?",
+        "Yes. The income statement exports to PDF, and on the Pro plan the monthly summary exports accounting data in CSV and FEC formats, ready to share with an accountant."
+      ],
+      [
+        "Which technologies power it?",
+        "Next.js 16, React 19 and TypeScript with Tailwind CSS, shadcn/ui and Radix UI, Chart.js for charts, React Hook Form for forms, React PDF, jsPDF and html2canvas for documents, PapaParse for CSV, GSAP for animation, and Docker for deployment."
+      ]
+    ]
+  },
+  {
+    "slug": "stability-payday-personal-finance-app",
+    "title": "Stability – Payday-Based Personal Finance App",
+    "chip": "Mobile App",
+    "lead": "A calm, payday-based budgeting app for iOS and Android built around one number, Safe to Spend, with bills, debts, savings goals and income in one warm, simple experience.",
+    "cover": "/assets/images/project-stability-cover.webp",
+    "heroPos": "0% 50%",
+    "galleryImgs": [
+      "/assets/images/project-stability-1.webp",
+      "/assets/images/project-stability-2.webp",
+      "/assets/images/project-stability-3.webp",
+      "/assets/images/project-stability-4.webp",
+      "/assets/images/project-stability-5.webp",
+      "/assets/images/project-stability-6.webp"
+    ],
+    "when": [
+      "Start: September 2026",
+      "End: October 2026"
+    ],
+    "status": "Completed",
+    "authorOverride": [
+      "StackVenger Team",
+      "Design & Engineering",
+      "/assets/icons/logo-mark.svg"
+    ],
+    "body": [
+      "Stability is a personal finance app for people who don't want to live inside a spreadsheet. Instead of dozens of charts and categories, it answers one question every payday: how much is actually safe to spend? We designed and built the app in Flutter for iOS and Android. It has a warm cream-and-brown palette, Lora serif typography and gentle staggered animations that make money feel less stressful.",
+      "Onboarding is a guided, two-minute setup that asks one question at a time. How does your income come in: the same every paycheck, varying a little, or varying a lot from gig work, tips or commissions? How often are you paid, and roughly how much? From there it asks about rent or mortgage, a car payment, other regular bills, any debts and anything you're saving for. Each amount can be entered monthly or matched to your pay frequency, and the flow ends with a personal Stability profile that shows your Safe to Spend straight away.",
+      "The home screen puts that number front and centre with a soft glow and a greeting for the time of day. Below it, a Payday Breakdown shows exactly where the paycheck goes: the amount going to bills, the number of bills, and what's left. Behind the scenes, Safe to Spend is calculated from your monthly income minus bills and savings. Weekly, fortnightly and twice-monthly pay are all normalised to the same scale, so the figure stays accurate whatever your pay schedule.",
+      "Five tabs cover the rest of a person's money. Pay manages income sources and commitments. Bills lists every recurring bill with its amount and due day. Balances tracks debts like student loans and credit cards. Goals holds savings targets such as an emergency fund or holiday gifts, along with their contributions. Everything can be added, edited and deleted through clean bottom sheets. Accounts support email sign-up with OTP verification, password reset by code, and Google and Apple sign-in through Firebase Authentication. Settings covers profile editing with photo upload, notification preferences, terms, privacy and account deletion.",
+      "Under the hood, Stability uses Riverpod for state management, Dio for the REST API, SharedPreferences for the session and connectivity checks for offline handling. Premium access runs through RevenueCat, which handles a \"Choose your plan\" paywall, purchases and restores across the App Store and Google Play. The result is a finished app that turns budgeting into one clear number people can trust."
+    ],
+    "faq": [
+      [
+        "What is \"Safe to Spend\"?",
+        "It's the money left from your paycheck after bills, debt payments and savings goals are covered. Stability recalculates it whenever your income, bills or goals change, so you always know what you can spend freely."
+      ],
+      [
+        "Does it work with irregular income?",
+        "Yes. During setup, users choose whether their income is steady, varies a little or varies a lot, and how often they're paid: weekly, every two weeks, twice a month or monthly. The app normalises everything so the number stays realistic."
+      ],
+      [
+        "Which platforms does Stability support?",
+        "It's a single Flutter codebase that ships to both iOS and Android, with layouts scaled from a 375×812 design for consistent spacing on every device."
+      ],
+      [
+        "How do users sign in?",
+        "With email and password (verified by a one-time code), or with Google or Apple sign-in through Firebase Authentication. Forgotten passwords are reset with an emailed OTP."
+      ],
+      [
+        "How are premium features sold?",
+        "Through RevenueCat. Users see a \"Choose your plan\" screen, purchase with native App Store or Google Play billing, and can restore their purchase on a new device."
+      ]
+    ]
+  },
+  {
     "slug": "optivo-solutions-consulting-website",
     "title": "Optivo Solutions – Business Operations Consulting Website",
-    "chip": "Web Design",
-    "lead": "A clean, conversion-focused home page for an operations consultancy, with services, role-based solutions, testimonials and a built-in free-consultation booking flow, designed in three colour directions.",
+    "chip": "Consulting",
+    "lead": "A conversion-focused website for an operations consultancy, with services, role-based solutions, testimonials and a built-in free-consultation booking flow.",
     "cover": "/assets/images/project-optivo-cover.webp",
     "galleryImgs": [
       "/assets/images/project-optivo-1.webp",
@@ -1021,101 +1086,39 @@ export const PROJECTS = [
       "Start: September 2026",
       "End: October 2026"
     ],
-    "status": "Design Completed",
+    "status": "Completed",
     "authorOverride": [
       "StackVenger Team",
-      "Web Design",
+      "Design & Engineering",
       "/assets/icons/logo-mark.svg"
     ],
     "body": [
-      "Optivo Solutions helps founders and operations leaders streamline processes, automate repetitive work and scale efficiently, from early-stage startups to established enterprises. We designed the company's home page: one page that has to explain the offer, build trust quickly and turn visitors into booked consultations. The result is bright, structured and calm, just like the service it sells.",
+      "Optivo Solutions helps founders and operations leaders streamline processes, automate repetitive work and scale efficiently, from early-stage startups to established enterprises. We designed and developed the company's website as a fast, fully responsive marketing site whose main job is to explain the offer, build trust quickly and turn visitors into booked consultations.",
       "The hero opens with \"Optimize Your Business Operations & Growth\", with the key word highlighted in a solid blue marker. Two clear calls to action, Start Your Transformation and Learn More, sit next to a layered photo collage of the team at work and a small Net Sales chart card that hints at measurable results. Below it, a strip of trusted technology partners adds instant credibility.",
       "The page then tells the story in order. \"Discover Our Services\" presents Process Optimization, Strategic Consulting and Team Development as wide rows, each with a photo, a short pitch, a checklist of what's included and a View Details link. The featured service is highlighted as a solid card. A tabbed \"Comprehensive Solutions for Every Role\" block speaks directly to founders, operations leads and teams, followed by a customer testimonial carousel.",
-      "Conversion happens without leaving the page. In \"Ready to Transform Your Business?\", visitors fill in a short form (name, company, email, the service they want and a message), then pick a date and time on an inline calendar with time-zone support, and book a free consultation. A \"Boost Your Success with Our 100% Guarantee\" banner and a footer with quick links, legal pages and contact details close the page.",
-      "We explored the design in three colour directions so the client could choose the personality of the brand: a soft light-blue version, a vivid blue version with the Optivo Solutions logo, and a sharp monochrome version with black accents. All three share the same layout, spacing and components, so the chosen direction can go straight into development."
+      "Conversion happens without leaving the page. In \"Ready to Transform Your Business?\", visitors fill in a short form (name, company, email, the service they want and a message), then pick an available date and time on an inline calendar that adapts to their time zone, and book a free consultation. Each booking is validated, stored and delivered straight to the Optivo team, and the visitor gets an email confirmation. A \"Boost Your Success with Our 100% Guarantee\" banner and a footer with quick links, legal pages, contact details and a newsletter sign-up close the page.",
+      "The site is built on a themeable component system. The light-blue, vivid-blue and monochrome themes shown here all run on the same reusable sections, so the brand can change its look without touching the layout. Pages are fully responsive, load quickly, are optimised for search, and are driven by a content layer, so the team can add services, testimonials and new pages without a developer."
     ],
     "faq": [
       [
-        "What was designed for Optivo Solutions?",
-        "The complete home page: hero, technology partners, services, role-based solutions, testimonials, the consultation booking section, the guarantee banner and the footer."
+        "What does the Optivo Solutions website include?",
+        "A complete home page with a hero, technology partners, services, role-based solutions, testimonials, a consultation booking section, a 100% guarantee banner and a full footer."
       ],
       [
-        "Why three colour directions?",
-        "To let the client choose the brand's personality: soft light blue, vivid blue with the Optivo logo, or monochrome with black accents. They all share one layout and component set."
+        "Why are there three colour themes?",
+        "The site runs on a themeable design system. The light blue, vivid blue (with the Optivo logo) and monochrome themes share one layout and component set, so the look can change without rebuilding any page."
       ],
       [
         "How does the consultation booking work?",
-        "Visitors fill in a short form with their name, company, email, the service they want and a message, then pick a date and time on an inline calendar with time-zone selection, all on the same page."
+        "Visitors fill in their name, company, email, the service they want and a short message, then choose an available date and time on an inline calendar that adapts to their time zone. The booking goes straight to the Optivo team and the visitor receives an email confirmation."
       ],
       [
         "Who is the website aimed at?",
         "Founders, operations leads and growing teams. The role-specific tabs let each visitor quickly see how Optivo helps their part of the business."
       ],
       [
-        "Is the design ready for development?",
-        "Yes. The page uses consistent spacing, typography and reusable sections, so it can be built in any modern framework or CMS."
-      ]
-    ]
-  },
-  {
-    "slug": "topproczar-business-suite-redesign",
-    "title": "Topproczar – All-in-One Business Suite Website & Dashboard Redesign",
-    "chip": "SaaS",
-    "lead": "A full redesign of Topproczar, a modular business platform for accounting, CRM, HRM, POS and projects: a conversion-focused marketing site with add-on pricing, plus a cleaner, faster admin dashboard.",
-    "cover": "/assets/images/project-topproczar-cover.webp",
-    "galleryImgs": [
-      "/assets/images/project-topproczar-1.webp",
-      "/assets/images/project-topproczar-2.webp",
-      "/assets/images/project-topproczar-3.webp",
-      "/assets/images/project-topproczar-4.webp",
-      "/assets/images/project-topproczar-5.webp",
-      "/assets/images/project-topproczar-6.webp",
-      "/assets/images/project-topproczar-7.webp",
-      "/assets/images/project-topproczar-8.webp",
-      "/assets/images/project-topproczar-9.webp",
-      "/assets/images/project-topproczar-10.webp",
-      "/assets/images/project-topproczar-11.webp",
-      "/assets/images/project-topproczar-12.webp",
-      "/assets/images/project-topproczar-13.webp",
-      "/assets/images/project-topproczar-14.webp"
-    ],
-    "when": [
-      "Start: October 2024",
-      "End: August 2025"
-    ],
-    "status": "Design Completed",
-    "authorOverride": [
-      "StackVenger Team",
-      "Product Design",
-      "/assets/icons/logo-mark.svg"
-    ],
-    "body": [
-      "Topproczar is an all-in-one business platform that lets companies \"take care of each need of their business functions in one place\". Accounting, HRM, CRM, POS, project management and payments are each available as an add-on module. We redesigned both sides of the product: the public marketing website that sells the packages, and the admin dashboard where customers actually run their business. The new identity is a fresh, confident green with plenty of white space, rounded cards and clear hierarchy.",
-      "The website opens with a limited-time offer bar and a bold green hero that shows the product in a device frame, with Get the Package and Topproczar calls to action. Value cards highlight free and open-source foundations, growth and 24/7 support. A \"Why choose dedicated modules for your business?\" timeline walks through each module (accounting and billing, HRM, CRM, projects, customers and vendors), pairing real dashboard screens with short benefit-led copy. Further down, \"Built with Technology You Can Trust\" explains the Laravel foundation, alongside testimonials and a dedicated eCommerce fashion-theme package.",
-      "Every add-on has its own detail page, such as Accounting at $50/month or $500/year, with a hero, feature walkthroughs (accounting and billing, inventory, proposal-to-payment and reports) and cross-links to the other modules. The Simple Pricing page lets buyers start from a Basic Package and toggle add-ons like Accounting, HRM, CRM, POS, Stripe and Project. They can set the number of workspaces and users, switch between monthly and yearly billing, see the total update live, and check out through a payment-details step. Login, registration, email confirmation, About, Terms and Privacy pages complete the site.",
-      "The redesigned dashboard brings a consistent layout, a collapsible sidebar, workspace switching and a language selector to every module. The Accounting dashboard summarises customers, vendors, invoices and bills, with account balances, cashflow, income-versus-expense trends and category breakdowns. The CRM dashboard tracks recently created and modified deals, deal calls by day and deals by stage, with dedicated screens for leads, pipelines, deal management and CSV imports.",
-      "Behind these sit complete back-office flows. Invoices, proposals and bills have setup screens for categories, units and tax rates. There are purchases and warehouses with stock transfers, banking accounts, a chart of accounts and transfers, plus revenue, credit notes, payments and debit notes. Customer and vendor profiles have tabs for invoices, proposals, projects and statements. Reports cover profit and loss, income vs expense, tax, transactions and account statements. User management includes roles with granular, colour-coded permissions and activity logs, turning a dense ERP into something teams can learn quickly."
-    ],
-    "faq": [
-      [
-        "What is Topproczar?",
-        "A modular business platform where companies pick the add-ons they need (Accounting, HRM, CRM, POS, Stripe payments and Project management) and run them from one dashboard."
-      ],
-      [
-        "What was redesigned?",
-        "Both the marketing website (home, add-on details, pricing, payment, auth and legal pages) and the admin dashboard (accounting, CRM, invoices, purchases, banking, reports and user management)."
-      ],
-      [
-        "How does the pricing page work?",
-        "Buyers start with the Basic Package, toggle the add-ons they want, choose the number of workspaces and users, and switch between monthly and yearly billing, with the total updating live before checkout."
-      ],
-      [
-        "How did the dashboard redesign improve usability?",
-        "It applies one consistent layout, sidebar and component set across every module, adds clear summary cards and charts on each dashboard, and organises dense accounting flows into simple list, create and detail screens."
-      ],
-      [
-        "How are permissions handled?",
-        "Admins create roles such as client, staff or HR and assign granular permissions for each module from colour-coded permission chips. User activity logs give full visibility."
+        "Can the team update the site themselves?",
+        "Yes. Content is managed separately from the layout, and every section is a reusable component, so services, testimonials and pages can be added or edited without a developer."
       ]
     ]
   }

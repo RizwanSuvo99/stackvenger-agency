@@ -3,7 +3,7 @@ import { ArrowRight, Chevron, ChevronRight, Close, Menu, Search } from "./icons"
 import SearchModal from "./SearchModal";
 import {
   Link, navigate as navGo, scrollToSection, SERVICE_PATH, SERVICE_PATHS, ABOUT_PATH,
-  PROJECTS_PATH, TEAM_PATH, BLOG_PATH, CONTACTS_PATH, PRICES_PATH,
+  PROJECTS_PATH, TEAM_PATH, CONTACTS_PATH,
 } from "../router";
 
 const services = [
@@ -15,9 +15,7 @@ const services = [
 
 const pages = [
   ["About Us", ABOUT_PATH],
-  ["Our Projects", PROJECTS_PATH],
   ["Our Team", TEAM_PATH],
-  ["Blog", BLOG_PATH],
 ];
 
 function ServicesMega() {
@@ -123,7 +121,7 @@ export default function Header({ onOpenContact, route }) {
                 <ServicesMega />
               </li>
               <li className="nav-item">
-                <Link to={PRICES_PATH} className={`nav-link${route === PRICES_PATH ? " is-cur" : ""}`}>Pricing</Link>
+                <Link to={PROJECTS_PATH} className={`nav-link${route === PROJECTS_PATH || route.startsWith("/projects/") ? " is-cur" : ""}`}>Our Projects</Link>
               </li>
               <li className="nav-item" onMouseEnter={(e) => alignMega(e, 0)} onMouseLeave={navEnd} onFocus={(e) => alignMega({ currentTarget: e.currentTarget }, 0)}>
                 {/* no page of its own: opens the dropdown (hover, click or keyboard focus) */}
@@ -176,7 +174,7 @@ export default function Header({ onOpenContact, route }) {
           </div>
         </div>
         <div className="m-group">
-          <Link to={PRICES_PATH} className="m-link">Pricing</Link>
+          <Link to={PROJECTS_PATH} className="m-link">Our Projects</Link>
         </div>
         <div className="m-group">
           <div className="m-label">Pages <Chevron size={15} /></div>

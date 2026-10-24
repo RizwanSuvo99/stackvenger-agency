@@ -1,13 +1,7 @@
 import Reveal from "./Reveal";
 import { ArrowRight } from "./icons";
 import { Link, TEAM_PATH } from "../router";
-
-const people = [
-  { name: "Ethan White", role: "AI Solutions Architect", img: "/assets/images/71-profile-1.webp" },
-  { name: "Maya Brooks", role: "Lead UX/UI Designer", img: "/assets/images/71-profile-2.webp" },
-  { name: "Ryan Chen", role: "Full-Stack Developer", img: "/assets/images/71-profile-3.webp" },
-  { name: "Liam Carter", role: "Front-End Developer", img: "/assets/images/71-profile-4.webp" },
-];
+import { TEAM } from "../data/team";
 
 export default function Team() {
   return (
@@ -32,7 +26,7 @@ export default function Team() {
       </div>
 
       <div className="team-grid container-fluid">
-        {people.map((m, i) => (
+        {TEAM.map((m, i) => (
           <Reveal className="team-card" key={m.name} delay={i * 90}>
             <div className="team-photo">
               <img

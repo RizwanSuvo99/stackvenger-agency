@@ -3,13 +3,7 @@ import { ArrowRight, ChevronRight, Facebook, Instagram, Star, XTwitter } from ".
 import { PageFooter, Na } from "./ServiceDetail";
 import { PROJECTS, coverSrc, galleryOf, bodyOf } from "../data/projects";
 import { Link, projectPath } from "../router";
-
-const AUTHORS = {
-  1: ["Ethan White", "AI Solutions Architect"],
-  2: ["Maya Brooks", "Lead UX/UI Designer"],
-  4: ["Liam Carter", "Front-End Developer"],
-  6: ["Sara Thompson", "Startup Growth Strategist"],
-};
+import { SHOW_SOCIAL_LINKS, SHOW_TESTIMONIALS } from "../config";
 
 const REVIEWS = [
   ["StackVenger took our rough concept and turned it into a polished SaaS product in just 8 weeks. The speed and quality blew us away!", "Alex Carter, Founder of Taskify", 5],
@@ -115,7 +109,7 @@ export default function ProjectDetail({ slug }) {
   const idx = PROJECTS.findIndex((p) => p.slug === slug);
   const p = PROJECTS[idx];
   const n = PROJECTS.length;
-  const [name, role, avatar] = p.authorOverride || [...AUTHORS[p.author], `/assets/images/71-profile-${p.author}.webp`];
+  const [name, role, avatar] = p.authorOverride;
   const body = bodyOf(p);
   // reference order: left arrow → next project in the grid, right arrow → previous one
   const left = PROJECTS[(idx + 1) % n];
@@ -156,13 +150,17 @@ export default function ProjectDetail({ slug }) {
               <p>{role}</p>
             </div>
           </div>
-          <h4 className="pj-side-h">Contact Links</h4>
-          <div className="pj-socials">
-            <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={16} /></a>
-            <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><XTwitter size={16} /></a>
-            <a href="https://pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><Pinterest /></a>
-            <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={16} /></a>
-          </div>
+          {SHOW_SOCIAL_LINKS && (
+            <>
+              <h4 className="pj-side-h">Contact Links</h4>
+              <div className="pj-socials">
+                <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={16} /></a>
+                <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><XTwitter size={16} /></a>
+                <a href="https://pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest"><Pinterest /></a>
+                <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={16} /></a>
+              </div>
+            </>
+          )}
         </aside>
       </section>
 
@@ -178,11 +176,13 @@ export default function ProjectDetail({ slug }) {
         </div>
       </section>
 
-      <section className="pj-testi">
-        <h2>Testimonials</h2>
-        <p className="pj-sub">Featured Endorsements &amp; Contributor Spotlights</p>
-        <Reviews />
-      </section>
+      {SHOW_TESTIMONIALS && (
+        <section className="pj-testi">
+          <h2>Testimonials</h2>
+          <p className="pj-sub">Featured Endorsements &amp; Contributor Spotlights</p>
+          <Reviews />
+        </section>
+      )}
 
       <section className="pj-related">
         <h2>Related Projects</h2>

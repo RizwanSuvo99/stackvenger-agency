@@ -10,12 +10,8 @@ export const SERVICE_PATH = SERVICE_PATHS[0];
 export const ABOUT_PATH = "/about-us/";
 export const PROJECTS_PATH = "/our-projects/";
 export const TEAM_PATH = "/our-team/";
-export const BLOG_PATH = "/blog-page/";
 export const CONTACTS_PATH = "/contacts/";
-export const PRICES_PATH = "/prices-page/";
 export const projectPath = (slug) => `/projects/${slug}/`;
-// blog posts live at the site root, like the reference (/<post-slug>/)
-export const postPath = (slug) => `/${slug}/`;
 
 export function useRoute() {
   const [path, setPath] = useState(window.location.pathname);

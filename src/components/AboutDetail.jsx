@@ -1,14 +1,8 @@
 import { ArrowRight, Star } from "./icons";
 import { Link, TEAM_PATH, PROJECTS_PATH, projectPath } from "../router";
 import { PROJECTS, coverSrc } from "../data/projects";
-
-const team = [
-  ["Ethan White", "AI Solutions Architect", 1],
-  ["Maya Brooks", "Lead UX/UI Designer", 2],
-  ["Ryan Chen", "Full-Stack Developer", 3],
-  ["Liam Carter", "Front-End Developer", 4],
-  ["Daniel Foster", "Back-End Engineer", 5],
-];
+import { TEAM } from "../data/team";
+import { SHOW_TESTIMONIALS } from "../config";
 
 const reviews = [
   ["We were impressed by their innovative approach to IoT connectivity. The platform they built has allowed us to connect devices across multiple regions with zero downtime.", 4, "Nina W.", "Operations Lead at ConnectIQ"],
@@ -55,9 +49,9 @@ export default function AboutDetail() {
           <span className="ab-pill">Meet Our Experts</span>
           <h2 className="ab-h2c gradient-text grad0">Meet the Professional Team</h2>
           <div className="ab-team">
-            {team.map(([name, role, n]) => (
+            {TEAM.map(({ name, role, img }) => (
               <div className="ab-tcard" key={name}>
-                <img src={`/assets/images/71-profile-${n}.webp`} alt={`${name}, ${role}`} loading="lazy" />
+                <img src={img} alt={`${name}, ${role}`} loading="lazy" />
                 <Link to={TEAM_PATH}>{name}</Link>
                 <span>{role}</span>
               </div>
@@ -93,32 +87,34 @@ export default function AboutDetail() {
           </div>
         </section>
 
-        <section className="ab-rev">
-          <h2>Our Clients Reviews</h2>
-          <div className="ab-revs">
-            {reviews.map(([quote, rating, name, who]) => (
-              <article className="ab-revcard" key={name}>
-                <div className="ab-stars" role="img" aria-label={`${rating} out of 5 stars`}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <span className="ab-star" key={i}>
-                      <Star size={20} className={i < rating ? "ab-star-cream" : "ab-star-dark"} />
-                    </span>
-                  ))}
-                </div>
-                <p className="ab-quote">"{quote}"</p>
-                <div className="ab-who">
-                  <span>{name}</span>
-                  <span>{who}</span>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="ab-dots" role="img" aria-label="Slide 1 of 3">
-            <span className="ab-dot ab-dot-a" />
-            <span className="ab-dot" />
-            <span className="ab-dot" />
-          </div>
-        </section>
+        {SHOW_TESTIMONIALS && (
+          <section className="ab-rev">
+            <h2>Our Clients Reviews</h2>
+            <div className="ab-revs">
+              {reviews.map(([quote, rating, name, who]) => (
+                <article className="ab-revcard" key={name}>
+                  <div className="ab-stars" role="img" aria-label={`${rating} out of 5 stars`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <span className="ab-star" key={i}>
+                        <Star size={20} className={i < rating ? "ab-star-cream" : "ab-star-dark"} />
+                      </span>
+                    ))}
+                  </div>
+                  <p className="ab-quote">"{quote}"</p>
+                  <div className="ab-who">
+                    <span>{name}</span>
+                    <span>{who}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="ab-dots" role="img" aria-label="Slide 1 of 3">
+              <span className="ab-dot ab-dot-a" />
+              <span className="ab-dot" />
+              <span className="ab-dot" />
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );

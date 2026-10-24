@@ -26,11 +26,11 @@ export function PageHero({ title, bg, pos = "50% 50%", lead, crumb, tall }) {
 }
 
 /* image + "contact us" form split used on Our Team and Contacts */
-export function FormSplit({ id, img, title, align = "center", rows = 6 }) {
+export function FormSplit({ id, img, title, align = "center", rows = 6, wide = false }) {
   const [sent, setSent] = useState(false);
   return (
-    <section className={`pg-split pg-split--${align}`} id={id}>
-      <img src={`/assets/images/${img}`} alt="" loading="lazy" width="614" height="700" />
+    <section className={`pg-split pg-split--${align}${wide ? " pg-split--wide" : ""}`} id={id}>
+      <img src={`/assets/images/${img}`} alt="" loading="lazy" width={wide ? 1400 : 614} height={wide ? 781 : 700} />
       <div className="pg-split-text">
         <h3>{title}</h3>
         <p>If you have any questions, you can contact us. Please, fill out the form below.</p>

@@ -7,32 +7,26 @@ import WhyUs from "./components/WhyUs";
 import Marquee from "./components/Marquee";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
+import { SHOW_TESTIMONIALS } from "./config";
 import Team from "./components/Team";
-import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
 import ServiceDetail from "./components/ServiceDetail";
 import AboutDetail from "./components/AboutDetail";
 import ProjectsPage from "./components/ProjectsPage";
 import TeamPage from "./components/TeamPage";
-import BlogPage from "./components/BlogPage";
 import ContactsPage from "./components/ContactsPage";
-import PricesPage from "./components/PricesPage";
 import ProjectDetail from "./components/ProjectDetail";
-import BlogPost from "./components/BlogPost";
-import { POSTS } from "./data/posts";
 import { PROJECTS } from "./data/projects";
 import {
-  useRoute, SERVICE_PATHS, ABOUT_PATH, PROJECTS_PATH, TEAM_PATH, BLOG_PATH, CONTACTS_PATH, PRICES_PATH,
+  useRoute, SERVICE_PATHS, ABOUT_PATH, PROJECTS_PATH, TEAM_PATH, CONTACTS_PATH,
 } from "./router";
 
 // inner pages that share the slim footer (nav + legal row only)
 const INNER_PAGES = {
   [PROJECTS_PATH]: [ProjectsPage],
   [TEAM_PATH]: [TeamPage],
-  [BLOG_PATH]: [BlogPage, "Blog Page"],
   [CONTACTS_PATH]: [ContactsPage, "Contacts"],
-  [PRICES_PATH]: [PricesPage],
 };
 
 export default function App() {
@@ -43,9 +37,7 @@ export default function App() {
   const route = useRoute();
   const projectSlug = route.match(/^\/projects\/([^/]+)\/$/)?.[1];
   const isProject = PROJECTS.some((p) => p.slug === projectSlug);
-  const postSlug = route.match(/^\/([^/]+)\/$/)?.[1];
-  const isPost = POSTS.some((p) => p.slug === postSlug);
-  // service, project and blog post pages render their own slim PageFooter
+  // service and project pages render their own slim PageFooter
   const isService = SERVICE_PATHS.includes(route);
   const isAbout = route === ABOUT_PATH;
   const slug = isService ? route.split("/").filter(Boolean).pop() : null;
@@ -62,10 +54,6 @@ export default function App() {
       ) : isProject ? (
         <main>
           <ProjectDetail slug={projectSlug} key={route} />
-        </main>
-      ) : isPost ? (
-        <main>
-          <BlogPost slug={postSlug} key={route} />
         </main>
       ) : InnerPage ? (
         <main>
@@ -86,14 +74,13 @@ export default function App() {
             <Services />
             <WhyUs />
             <Projects />
-            <Testimonials />
+            {SHOW_TESTIMONIALS && <Testimonials />}
             <Team />
             <Marquee />
-            <Pricing />
           </main>
         </div>
       )}
-      {isService || isProject || isPost ? null : inner ? (
+      {isService || isProject ? null : inner ? (
         <Footer onOpenContact={openContact} variant="about" slim activeNav={inner[1]} />
       ) : (
         <Footer

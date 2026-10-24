@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Check, Close, Facebook, Instagram, XTwitter } from "./icons";
+import { SHOW_SOCIAL_LINKS } from "../config";
 
 export default function ContactModal({ open, onClose }) {
   const [sent, setSent] = useState(false);
@@ -76,14 +77,16 @@ export default function ContactModal({ open, onClose }) {
           </>
         )}
 
-        <div className="modal-social">
-          <p>Follow us</p>
-          <div className="social-row">
-            <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><XTwitter size={17} /></a>
-            <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
-            <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
+        {SHOW_SOCIAL_LINKS && (
+          <div className="modal-social">
+            <p>Follow us</p>
+            <div className="social-row">
+              <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X (Twitter)"><XTwitter size={17} /></a>
+              <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+              <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

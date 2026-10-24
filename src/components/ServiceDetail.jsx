@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, Chevron, ChevronRight, Facebook, Instagram, XTwitter } from "./icons";
-import { Link, sectionLink, ABOUT_PATH, SERVICE_PATHS, BLOG_PATH, CONTACTS_PATH, TEAM_PATH } from "../router";
+import { ArrowRight, Chevron, ChevronRight } from "./icons";
+import { Link, sectionLink, ABOUT_PATH, SERVICE_PATHS, CONTACTS_PATH, TEAM_PATH } from "../router";
+import { TEAM } from "../data/team";
 
 const [AI_PATH, CSW_PATH, AIA_PATH, SWA_PATH] = SERVICE_PATHS;
 
@@ -86,11 +87,7 @@ const SERVICES = {
   },
 };
 
-const team = [
-  ["Ethan White", "AI Solutions Architect", 1],
-  ["Maya Brooks", "Lead UX/UI Designer", 2],
-  ["Ryan Chen", "Full-Stack Developer", 3],
-];
+const team = TEAM.slice(0, 3);
 
 const hours = ["06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"];
 const minutes = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
@@ -98,7 +95,6 @@ const minutes = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50
 const fnav = [
   ["About Us", ABOUT_PATH],
   ["Our Services", "#services"],
-  ["Blog Page", BLOG_PATH],
   ["Contacts", CONTACTS_PATH],
 ];
 
@@ -124,19 +120,8 @@ export function PageFooter() {
         </nav>
         <div className="pfooter-row">
           <p className="pfooter-legal">
-            This is a sample website - <a href="https://cmsmasters.studio/" target="_blank" rel="noreferrer">cmsmasters</a> © 2026 - All Rights Reserved
+            Copyright StackVenger © 2026 - All Rights Reserved
           </p>
-          <div className="pfooter-socials">
-            <a href="https://facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook-f">
-              <Facebook size={20} />
-            </a>
-            <a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <Instagram size={20} />
-            </a>
-            <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X-twitter">
-              <XTwitter size={20} />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
@@ -252,10 +237,10 @@ export default function ServiceDetail({ slug }) {
 
             <h3 className="svc-h3 svc-h3-team">Our Team</h3>
             <div className="svc-team">
-              {team.map(([name, role, n]) => (
+              {team.map(({ name, role, img }) => (
                 <div className="svc-team-card" key={name}>
                   <Link className="svc-team-photo" to={TEAM_PATH} aria-label={name}>
-                    <img src={`/assets/images/71-profile-${n}.webp`} alt={`${name}, ${role}`} loading="lazy" />
+                    <img src={img} alt={`${name}, ${role}`} loading="lazy" />
                     <span className="svc-team-over">
                       <ArrowRight size={18} className="svc-team-arrow" />
                     </span>

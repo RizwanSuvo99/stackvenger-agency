@@ -1,18 +1,11 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Facebook, Instagram, XTwitter } from "./icons";
-import { Link, sectionLink, ABOUT_PATH, BLOG_PATH, CONTACTS_PATH } from "../router";
+import { ArrowRight } from "./icons";
+import { Link, sectionLink, ABOUT_PATH, CONTACTS_PATH } from "../router";
 
 const nav = [
   ["About Us", ABOUT_PATH],
   ["Our Services", "#services"],
-  ["Blog Page", BLOG_PATH],
   ["Contacts", CONTACTS_PATH],
-];
-
-const socials = [
-  ["Facebook", <Facebook size={19} key="fb" />, "https://facebook.com/"],
-  ["Instagram", <Instagram size={19} key="ig" />, "https://instagram.com/"],
-  ["X (Twitter)", <XTwitter size={19} key="x" />, "https://x.com/"],
 ];
 
 export default function Footer({ onOpenContact, variant, activeNav, slim }) {
@@ -78,15 +71,8 @@ export default function Footer({ onOpenContact, variant, activeNav, slim }) {
         </div>
         <div className="container">
           <p className="footer-legal">
-            This is a sample website – cmsmasters © 2026 - All Rights Reserved
+            Copyright StackVenger © 2026 - All Rights Reserved
           </p>
-          <div className="social-row">
-            {socials.map(([label, icon, href]) => (
-              <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}>
-                {icon}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 

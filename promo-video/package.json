@@ -1,0 +1,43 @@
+{
+  "name": "promo-video",
+  "version": "1.0.0",
+  "description": "StackVenger 90-second promo video",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "@remotion/google-fonts": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "@remotion/transitions": "4.0.538",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.538"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.538",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "sharp": "^0.33.5",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "assets": "node scripts/prepare-assets.mjs",
+    "build": "remotion bundle",
+    "render": "remotion render StackVengerPromo out/stackvenger-promo.mp4 --codec=h264 --crf=18",
+    "still": "remotion still StackVengerPromo out/poster.png --frame=330",
+    "web": "bash scripts/make-web.sh",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc",
+    "music": "node scripts/make-music.mjs"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}

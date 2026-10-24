@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Close, Search } from "./icons";
 import { PROJECTS } from "../data/projects";
-import { POSTS } from "../data/posts";
 import {
-  Link, SERVICE_PATHS, ABOUT_PATH, PROJECTS_PATH, TEAM_PATH, BLOG_PATH, CONTACTS_PATH, PRICES_PATH, projectPath, postPath,
+  Link, SERVICE_PATHS, ABOUT_PATH, PROJECTS_PATH, TEAM_PATH, CONTACTS_PATH, projectPath,
 } from "../router";
 
 const SERVICE_NAMES = [
@@ -14,10 +13,9 @@ const SERVICE_NAMES = [
 ];
 
 const INDEX = [
-  ...[["Home", "/"], ["About Us", ABOUT_PATH], ["Our Projects", PROJECTS_PATH], ["Our Team", TEAM_PATH], ["Blog", BLOG_PATH], ["Pricing", PRICES_PATH], ["Contacts", CONTACTS_PATH]].map(([t, to]) => ({ t, to, kind: "Page" })),
+  ...[["Home", "/"], ["About Us", ABOUT_PATH], ["Our Projects", PROJECTS_PATH], ["Our Team", TEAM_PATH], ["Contacts", CONTACTS_PATH]].map(([t, to]) => ({ t, to, kind: "Page" })),
   ...SERVICE_NAMES.map((t, i) => ({ t, to: SERVICE_PATHS[i], kind: "Service" })),
   ...PROJECTS.map((p) => ({ t: p.title, to: projectPath(p.slug), kind: "Project", sub: p.lead })),
-  ...POSTS.map((p) => ({ t: p.title, to: postPath(p.slug), kind: "Blog", sub: p.lead })),
 ];
 
 export default function SearchModal({ open, onClose }) {
